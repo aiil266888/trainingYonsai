@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size:80px;
+            font-family:"Arial Rounded MT";
+        }
+
+        .shadow1{
+            color: orange; /*글자색*/
+            text-shadow:1px 1px; /*텍스트 그림자*/
+        }
+        .shadow2{
+            text-shadow: 5px 5px 3px #f00; 
+            /*텍스트 그림자 (x, y, 블러(퍼짐효과)) x축은 양수면 오른쪽으로 y축은 양수면 아래로*/
+        }
+        .shadow3{
+            color:#fff; /*글자색*/
+            text-shadow:7px -7px 5px #000; /*텍스트 그림자*/
+        }
+        .shadow4{
+            width: 300px;
+            height: 200px;
+            background-color: aquamarine;
+            box-shadow: 5px 5px 3px rgb(89, 0, 255); 
+        }
+        img{
+            box-shadow: 5px 5px 3px #333;
+        }
+        </style>
+</head>
+<body>
+    <div class="shadow1">HTML5</div>
+    <div class="shadow2">HTML5</div>
+    <div class="shadow3">HTML5</div>
+    <div class="shadow4">HTML5</div>
+    <img src="images/top.jpg" alt="apple">
+</body>
+</html>

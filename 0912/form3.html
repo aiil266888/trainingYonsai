@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul{list-style: none;}
+        li{line-height: 40px;} /* 줄 간격(행간) */
+        label{width:200px; float: left;}
+    </style>
+</head>
+<body>
+    <h1>레드향 주문하기</h1>
+    <form action="">
+        <fieldset>
+            <legend>상품선택</legend>
+            <ul>
+                <li>
+                    <input type="text">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>배송정보</legend>
+            <ul id="shopping">
+                <li>
+                    <label for="prod">주문상품</label>
+                    <!-- value: 기본값 설정 -->
+                    <input type="text" id="prod" value="상품용 3Kg">
+                </li>
+                <li>
+                    <!-- required: 필수입력 사항  -->
+                    <label for="user-name">이름</label>
+                    <input type="text" id="user-name" required>
+                </li>
+                <li>
+                    <!-- placeholder: 지워지는 기본값 -->
+                    <label for="r-phone">연락처</label>
+                    <input type="text" name="r-phone" id="r-phone" placeholder="-는 빼고 입력하세요" required>
+                </li>
+                <li>
+                    <label for="r-pass">이메일</label>
+                    <input type="email" name="r-email" id="r-email">
+                </li>
+                <li>
+                    <label for="r-day">배송주소</label>
+                    <input type="text" name="r-day" id="r-day" required>
+                </li>
+                <li></li>
+                    <label for="r-dday">배송지정</label>
+                    <input type="date" name="r-dday" id="r-dday">
+                </li>
+            </ul>
+        </fieldset>
+        <div id="button">
+            <input type="submit" value="주문하기">
+            <input type="submit" value="취소하기">
+        </div>
+    </form>
+    
+</body>
+</html>

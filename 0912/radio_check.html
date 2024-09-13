@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{list-style: none;}
+        li{height: 20px;}
+    </style>
+</head>
+<body>
+    <h1>레드향 주문하기</h1>
+    <legend>상품 선택</legend>
+    <p><b>주문할 상품을 선택 해주세요</b></p>
+    <form action="">
+        <ul>
+            <li>
+                <label><input type="checkbox" value="s_3">선물용3Kg</label>
+                <input type="number">개
+            </li>
+            <li>
+                <label><input type="checkbox" value="s_5">선물용5Kg</label>
+                <input type="number">개
+            </li>
+            <li>
+                <label><input type="checkbox" value="f_3">가정용3Kg</label>
+                <input type="number">개
+            </li>
+            <li>
+                <label><input type="checkbox" value="f_5">가정용5Kg</label>
+                <input type="number">개
+            </li>
+        </ul>
+        <!-- checkbox는 다중선택 가능 radio는 하나만 선택 -->
+        <p><b>포장 선택</b></p>
+        <ul>
+            <li>
+                <label><input type="radio" name="gift" value="yes">선물포장</label>
+            </li>
+            <li>
+                <label><input type="radio" name="gift" value="no">선물포장 안함</label>
+            </li>
+        </ul>
+        <div id="button">
+            <input type="submit" value="주문하기">
+            <input type="submit" value="취소하기">
+        </div>
+    </form>
+</body>
+</html>

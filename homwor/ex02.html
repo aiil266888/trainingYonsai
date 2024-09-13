@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper</title>
+    <style>
+        ul{list-style: none;}
+        ul li{margin-bottom:5px;}
+        .bigbox{
+            width: 500px;
+            margin: 0 auto;
+            overflow: auto;
+            padding-bottom: 20px;
+            border: 1px solid #333;
+        }
+        .header{
+            border-bottom: 2px solid rgb(196, 192, 192);
+        }
+        .header p{
+            font-size: 14px;
+        }
+        .section{
+            font-weight: bold;
+            padding-bottom:5px;
+        }
+        .radio section{
+            line-height: 5px;
+        }
+        label.title{
+            float: left;
+            width: 80px;
+        }
+        .selection{
+        }
+        fieldset{
+            border: none;
+        }
+        .bto{
+            margin-left:13px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bigbox">
+        <fieldset class="form">
+            <div class="header">
+                <h1>프런트 엔드 개발자 지원서</h1>
+                <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다</p>
+            </div>
+            <h4 class="section">개인정보</h4>
+            <ul>
+                <li>
+                    <label for="name" class="title">이름</label>
+                    <input type="text" id="name" placeholder="공백없이 입력하세요">
+                    
+                </li>
+                <li>
+                    <label for="phone" class="title">연락처</label>
+                    <input type="tel" id="phone">
+                </li>
+            </ul>
+            <h4 class="section">지원분야</h4>
+            <ul class="radio">
+                <li>
+                    <label><input type="radio" name="field" value="publish" class="selection">웹 퍼블리싱</label>
+                </li> 
+                <li>   
+                    <label><input type="radio" name="field" value="engin" class="selection">웹 애플리케이션 개발</label>
+                </li>    
+                <li>
+                    <label><input type="radio" name="field" value="solution" class="selection">개발 환경 개선</label>
+                </li>
+            </ul>
+                <label for="pr" class="section">지원 동기</label>
+                <textarea name="pr" id="pr" cols="60" rows="5"></textarea>
+        </fieldset>
+        <div class="bto">
+            <input type="submit" value="접수하기">
+            <input type="reset" value="다시 쓰기">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 구체적으로 지정한 CSS가 우선순위로 적용 */
+        
+        
+        .red{color:red}
+        h1{color:blue !important}
+        #purple{color: purple;}
+        
+    </style>
+</head>
+<body>
+    <div>
+        <!-- id는 전체 html에서 하나만 존재해야함(유일한선택자) class는 여러개 존재 가능  -->
+        <h1 class="red" id="purple">강한 순서는 !important>id>class>h1태그 </h1>
+    </div>
+</body>
+</html>
+
+<!-- 
+선택자 우선순위
+1. !important
+2. id 선택자
+3. class 선택자 
+4. 태그 선택자
+-->
