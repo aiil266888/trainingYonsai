@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            border: 1px solid #333;
+        }
+        .box1{
+            background-color: yellowgreen;
+            /* 안 여백이 위 오른쪽 아래 왼쪽 각각 10px씩 */
+            padding-left: 20px;
+        }
+        .box2{
+            background-color: red;
+            padding: 10px;
+        }
+        .box3{
+            background-color: violet;
+            /* 안 여백이 위아래 20/ 좌우 30px */
+            padding: 20px 30px;
+        }
+        .box4{
+            background-color: aqua;
+            /* 안 여백 위 오른쪽 아래 왼쪽  */
+            padding: 10px 20px 30px 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div는 division 구역을 나눌 때 쓴다 -->
+    <div>
+        <!-- box라는 공통 클래스와 box1~4 개별클래스를 동시에 갖는다.  -->
+        <div class="box box1">박스1</div>
+        <div class="box box2">박스2</div>
+        <div class="box box3">박스3</div>
+        <div class="box box4">박스4</div>
+    </div>
+</body>
+</html>
