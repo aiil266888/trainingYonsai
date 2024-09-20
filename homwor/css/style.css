@@ -1,0 +1,99 @@
+/* 모든 요소에 마진/패딩 0을 적용 */
+*{margin:0; padding:0;}
+
+
+.wrap{
+    width:1000px;
+    margin:0 auto;
+}
+header{
+    background-image: url(../img/top.jpg);
+    background-repeat: none;
+    background-size: cover;
+    width:1000px;
+    height:330px;
+    padding-bottom:5px;
+}
+.logo{
+    color: white;
+    text-align: right;
+    line-height: 500px;
+    padding-right: 50px;
+}
+nav{
+    background-color: rgb(58, 34, 11);
+    height:60px;
+}
+nav ul li{
+    list-style:none;
+    display:inline-block;
+    width: 195px;
+}
+nav ul li a{
+    border: 2px solid white;
+    border-radius: 30px;
+    text-decoration:none;
+    color: white;
+    width: 195px;
+    line-height: 60px;
+    padding:12px 50px;
+    margin-left:10px;
+    font-size: bold;
+}
+nav ul li a:hover{
+    background-color: white;
+    color: rgb(36, 25, 17);
+}
+main{
+    overflow: hidden;
+}
+section{
+    background-color: rgb(218, 218, 218);
+    width:680px;
+    float:left;
+}
+.content h3{
+    text-align: center;
+    margin:10px;
+}
+.content h4{
+    margin:10px;
+}
+.content article{
+    border:1px solid black;
+    width:300px;
+    height: 231px;
+    float:left;
+    background-color: white;
+    margin-left:25px;
+    margin-bottom:25px;
+}
+.content article h4{
+    background-image: url(../img/kong.png);
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+.content article p{
+    margin:5px;
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 17px;
+}
+aside{
+    background-color: rgb(116, 96, 86);
+    width: 320px;
+    float:right;
+}
+aside img{
+    width: 280px;
+    height: 160px;
+    margin-bottom:8px;
+    margin-left:20px;
+}
+footer{
+    background-color: rgb(48, 48, 48);
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}

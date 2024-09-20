@@ -1,0 +1,57 @@
+header{
+    width:90%;
+    background-color: #069;
+    overflow: hidden;
+    padding: 10px;
+    margin: 0 auto;
+    color: white;
+}
+header h1{
+    width:40%;
+    float:left;
+    color:#fff;    
+}
+header nav{
+    width:60%;
+    float:right;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin:15px;
+}
+nav ul li a{
+    /* 밑줄제거 */
+    text-decoration: none;
+    color: white;
+}
+section{
+    width:90%;
+    margin:0 auto;
+    border: 5px solid #333;
+}
+article{
+    width: 90%;
+    height: auto;
+    border: 1px solid #333;
+    margin: 20px 10px;
+    padding:20px;
+}
+article h3{
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+#pet1{
+    border: 1px solid black;
+    border-radius : 10px;
+}
+#pet2{
+    border: 1px solid blue;
+    border-radius: 20px;
+}
+#pet3{
+    border: 3px double green;
+    border-top-left-radius:30px;
+    border-bottom-right-radius:30px;
+}
