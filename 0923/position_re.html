@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+        }
+        .box1{
+        }
+        .box2{            
+            background-color: bisque;
+        }
+        .box3{            
+            /* 아래에 영향을 주지 않고 독자적으로 원래 위치를 기준으로 이동한다 (아래와 겹친다) */
+            position:relative;
+            top:50px;
+            left:50px;
+            background-color: aquamarine;
+            z-index:1;
+        }
+        .box4{            
+            background-color: blueviolet;
+            position:relative;
+        }
+        /*
+        relative
+        1. 자리값이 있다.(원래 자리를 안뺏김)
+        2. top, left 이동 가능
+        3. absolute의 부모 역할을 한다
+        4. 겹칠 수 있다.
+        */
+    </style>
+</head>
+<body>
+    <!-- 
+    기본적으로 가장 마지막에 만든게 위로
+    하지만 z-index값을 주고 숫자가 클수록 위로 올라온다 
+    -->
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>

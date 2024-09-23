@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        *{margin:0; padding:0;}
+        .bigbox{
+            width: 1200px;
+            border:1px dotted rgb(0, 0, 0);
+            height: 500px;
+            margin: 0 auto;
+        }
+        .bigbox h2{
+            text-align: center;
+            padding:70px;
+        }
+        .box{
+            width:150px;
+            height:200px;
+            border:1px dotted red;
+            float: left;
+            margin-left:100px;
+        }
+
+        .box1 img{transition:all 0.3s;}
+    
+        .box1:hover img{
+            transform:rotate(360deg)
+        }
+        .box2 img{
+            transform-origin: left top;
+        }
+        .box2:hover img{
+            transform:rotate(360deg);
+        }
+        .box3:hover img{
+            transform: rotateY(360deg);
+        }
+    </style>
+<body>
+    <div class="bigbox">
+            <h2>강아지 묘기</h2>
+            <div class="box box1">
+                <img src="../0911/img/cat1_1.jpg" alt="">
+            </div>
+            <div class="box box2">
+                <img src="../0911/img/cat2_1.jpg" alt="">
+            </div>
+            <div class="box box3">
+                <img src="../0911/img/cat3_1.jpg" alt="">
+            </div>
+            <div class="box box4">
+                <img src="../0911/img/cat4_1.jpg" alt="">
+            </div>
+    </div>
+</body>
+</html>

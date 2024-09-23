@@ -1,0 +1,108 @@
+*{margin:0; padding:0;}
+.bigbox{
+    width:500px;
+    height:500px;
+    position: relative;
+    border:1px dotted #333;
+    margin: 100px auto 0; /* 좌 우 중앙정렬 auto 위 100 아래 */
+}
+
+.face{
+    position: absolute;
+    width:500px;
+    height:500px;
+    background-color: #7297db;
+    border:10px solid #333;
+    border-radius: 50%;
+    bottom:0;
+    /* 선 두께 포함 500*400 */
+    box-sizing: border-box;
+}
+
+.eye{
+    width:30px;
+    height: 30px;
+    background-color: #333;
+    border-radius:50%;
+    position:absolute;
+    top:165px;
+}
+.eye.left{left:65px;}
+.eye.right{right:65px;}
+
+.nose{
+    width:60px;
+    height:60px;
+    background-color: #333;
+    border-radius:50%;
+    position: absolute;
+    top:230px;
+    left:50%;
+    margin-left:-30px;
+    z-index: 2;
+}
+
+.mouth{
+    width:75px;
+    height:100px;
+    background-color: #fff;
+    border:10px solid #333;
+    border-radius: 48%;
+    position:absolute;
+    top:255px;
+}
+.mouth.left{
+    left:160px;
+    transform:rotate(40deg);
+}
+.mouth.right{
+    right:160px;
+    transform:rotate(-40deg);
+}
+
+.ber{
+    width:80px;
+    height:5px;
+    background-color: #333;
+    border-radius: 20%;
+    position:absolute;
+    z-index: 3;
+}
+.ber.beard1{
+    left:120px;
+    top:270px;
+    transform:rotate(17deg);
+}
+.ber.beard2{
+    left:100px;
+    top:305px;
+}
+.ber.beard3{
+    left:100px;
+    top:340px;
+    transform-origin: right top;
+    transform:rotate(-20deg);
+}
+.ber.beard4{
+    right:120px;
+    top:270px;
+    transform:rotate(-17deg);
+}
+.ber.beard5{
+    right:100px;
+    top:305px;
+}
+.ber.beard6{
+    right:100px;
+    top:340px;
+    transform:rotate(17deg);
+    transform-origin: left top;
+}
+
+.bobady.nack{
+    width: 400px;
+    height:200px;
+    background-color: #537ac2c9;
+    top:500px;
+    position: absolute;
+}

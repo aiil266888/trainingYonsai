@@ -1,0 +1,99 @@
+*{margin: 0; padding: 0;}
+
+.wrap{
+    width:900px;
+    /* 전체 중앙정렬 */
+    margin: 0 auto;
+}
+header{
+    position:relative;
+    height:300px;
+    background: url(../../homwor/img/top.jpg) 0% 20%;
+}
+.logo{
+    position:absolute;
+    bottom:50px;
+    right:50px;
+    color: #fff;
+}
+nav{
+    width:900px;
+    height: 70px;
+    background-color: #2a1b0a;
+}
+nav ul{
+    list-style:none;
+}
+nav ul li{
+    float: left;
+    margin-top:15px;
+    margin-left: 25px;
+}
+nav ul li a{
+    /* a는 인라인요소 width, height를 적용하기 위해 block요소로 변경 */
+    display: block;
+    width:150px;
+    /* height와 line-height을 같게주면 세로 중앙정렬 */
+    height:40px;
+    line-height: 40px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    background-color: #fff;
+    color:#2a1b0a;
+    text-decoration:underline;
+}
+.content{
+    /* height:550px; */
+    overflow:hidden;
+}
+section{
+    width:650px;
+    height:550px;
+    background-color: #ccc;
+    float:left;
+}
+section h3{
+    padding: 10px 0;
+    /* 위아래 안여백 */
+    text-align: center;
+}
+section article{
+    width:270px;
+    height:200px;
+    border: 1px solid #333;
+    float:left; /* 옆으로 나열 */
+    padding: 10px; /* 안여백 위 오른쪽 아래 왼쪽 각10px */
+}
+article h4{
+    background: url(../../homwor/img/kong.png);
+    background-repeat: no-repeat;
+    padding-left:20px;
+}
+article p{
+    line-height: 170%;
+    text-align:justify;
+}
+aside{
+    width:250px;
+    height:550px;
+    background-color: #726054;
+    float: left;
+    text-align: center;
+}
+
+aside img{
+    width:220px;
+}
+footer{
+    /* clear:both; -float를 취소 */
+    height:60px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
