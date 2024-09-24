@@ -1,0 +1,36 @@
+*{margin:0; padding:0;}
+ul{list-style:none;}
+#container{
+    width:800px;    
+}
+#header{
+    height:70px;
+}
+/* one 바로 밑 li만 선택할때 >를 사용한다 */
+.one>li{
+    float:left;
+}
+.one li{
+    background-color: cornflowerblue;
+}
+.one li a{
+    display:block;
+    width:200px;
+    height:50px;
+    line-height:50px;
+    text-decoration:none;
+    color: black;
+    text-align: center;
+}
+.one li ul{
+    display: none;
+    /* 겹치는 속성 : 이동속성은 left top을 주지 않았으므로 원래위치 */
+    position:absolute;
+}
+.one li:hover ul{
+    display:block;
+}
+
+.one li:hover a{
+    background-color: yellow;
+}

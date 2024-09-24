@@ -1,0 +1,54 @@
+*{margin:0;padding:0;}
+
+#wrap{
+    width: 1200px;
+    height: 700px;
+}
+
+header{
+    width:100%;
+    height:100px;
+    background-color:rgb(129, 163, 255);
+}
+#img_slide{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(230, 223, 125);
+}
+section{
+    width:100%;
+    height: 200px;
+    background-color: rgb(231, 118, 127);
+}
+section article img{
+    float: left;
+    width: 400px;
+    height: 200px;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: limegreen;
+}
+footer .f_logo{
+    float:left;
+    width:250px;
+    height: 100%;
+    background-color:blueviolet;
+}
+footer .f_menu{
+    float:left;
+    width:950px;
+    height: 50%;
+    background-color: orangered;
+}
+footer .f_copy{
+    float:left;
+    width:950px;
+    height: 50%;
+    background-color: aqua;
+}
+
+footer>div{
+    float:left;
+}
