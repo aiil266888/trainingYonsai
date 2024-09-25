@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            border:1px solid red;
+            position: relative;
+            width:830px;
+            height:310px;
+            margin:100px auto 0;
+        }
+        .box{
+            width:200px;
+            height:150px;
+            display: block;
+            position: absolute;
+        }
+        .box img{
+            display: block;
+        }
+        .box1{
+            top:0;
+            left:0;
+        }
+        .box2{
+            top:160px;
+            left:0;
+        }
+        .box3{
+            top:0px;
+            left:210px;
+            width:200px;
+            height:310px;
+        }
+        .box4{
+            top:0px;
+            left:420px;
+        }
+        .box5{
+            top:0px;
+            left:630px;
+        }
+        .box6{
+            top:160px;
+            left:420px;
+            width:410px;
+            height:150px;
+        }
+
+        .box::after{
+            content:'';
+            width: 0%;
+            height: 100%;
+            background-color: rgba(60, 60, 197, 0.5);
+            opacity:1;
+            transition:all 0.4s;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+
+        .box:hover::after{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box box1">
+          <img src="images/women1.jpg" alt="w1" />
+          <div class="win win1"></div>
+        </div>
+        <div class="box box2">
+          <img src="images/women2.jpg" alt="w2" />
+          <div class="win win2"></div>
+        </div>
+        <div class="box box3">
+          <img src="images/aaa1.jpg" alt="aaa1" />
+          <div class="win win3"></div>
+        </div>
+        <div class="box box4">
+          <img src="images/women3.jpg" alt="w3" />
+          <div class="win win4"></div>
+        </div>
+        <div class="box box5">
+          <img src="images/women4.jpg" alt="w4" />
+          <div class="win win5"></div>
+        </div>
+        <div class="box box6">
+          <img src="images/bbb1.jpg" alt="bbb1" />
+          <div class="win win6"></div>
+        </div>  
+      </div>
+</body>
+</html>
