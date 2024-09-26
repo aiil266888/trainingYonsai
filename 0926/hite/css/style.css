@@ -1,0 +1,162 @@
+*{margin:0; padding:0;}
+.cf::after{
+    clear:both;
+    display:block;
+    content:"";
+}
+ul, li{list-style:none;}
+
+#wrap{
+    margin:20px auto;
+    width: 100%;
+    height: auto;
+    background-color: antiquewhite;
+}
+
+section{
+    width:1070px;
+    height:1020px;
+    margin:0 auto;
+}
+
+section h1{
+    padding: 60px 0 30px 0;
+    font-weight: normal;
+}
+
+#content{
+    width: 1070px;
+    height: 900px;
+    position:relative;
+    border: 1px solid red;
+}
+
+#content div{
+    position: absolute;
+    display:none;
+}
+
+#content div a::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:0%;
+    background-color: rgba(4,69,244,0.85);
+    transition: all 0.2s;
+}
+
+#content div a p{
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    width:100%;
+    top:80px;
+    color:#fff;
+    font-size: 13px;
+    text-align: center;
+    padding-bottom: 50px;
+    background: url(../img/more.png) no-repeat 50% 100%;
+    transition:all  0.5s;
+}
+/* 글자보이게 */
+#content div a:hover p{
+    opacity:1;
+}
+/* 파란배경 나타나게 */
+#content div a:hover::before{
+    width: 100%;
+}
+
+
+
+/* ----------------img1 ----------------*/
+#content div.img1{
+    display: block;
+    top:0;
+    left:0;
+    width:260px;
+    height:260px;
+}
+/* ----------------img2 ----------------*/
+#content div.img2{
+    display: block;
+    top:0;
+    left:270px;
+    width:260px;
+    height:530px;
+}
+
+#content div.img2 a p{
+    top:40%;
+}
+/* ----------------img3 ----------------*/
+#content div.img3{
+    display: block;
+    top:0;
+    left:540px;
+    width:260px;
+    height:260px;
+}
+/* ----------------img4 ----------------*/
+#content div.img4{
+    display: block;
+    top:0;
+    left:810px;
+    width:260px;
+    height:560px;
+}
+/* ----------------img5 ----------------*/
+#content div.img5{
+    display: block;
+    top:270px;
+    left:0;
+    width:260px;
+    height:260px;
+}
+/* ----------------img6 ----------------*/
+#content div.img6{
+    display: block;
+    top:270px;
+    left:540px;
+    width:530px;
+    height:260px;
+}
+/* ----------------img7 ----------------*/
+#content div.img7{
+    display: block;
+    top:540px;
+    left:0;
+    width:260px;
+    height:260px;
+}
+/* ----------------img8 ----------------*/
+#content div.img8{
+    display: block;
+    top:540px;
+    left:270px;
+    width:530px;
+    height:260px;
+}
+/* ----------------img9 ----------------*/
+#content div.img9{
+    display: block;
+    top:540px;
+    left:810px;
+    width:260px;
+    height:260px;
+}
+
+/* 이미지 6과 8 따로 적용 */
+#content div.img6 a::before,
+#content div.img8 a::before
+{
+    width: 100%;
+    height: 0%;
+}
+#content div.img6 a:hover::before,
+#content div.img8 a:hover::before{
+    height: 100%;
+}

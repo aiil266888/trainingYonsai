@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tr1 h1{
+            text-align: center;
+            font-size:52px;
+        }
+        .tr1{
+            width:100px;
+            height:100px;
+            background-color: red;
+            border:1px solid black;
+            /* transition:all 1s; */
+            transition-property: background-color, transform, width, height;
+            /* 속성 4개를 줬는데 두개만 기재했을경우 2s 3s 2s 3s로 해석*/
+            transition-duration: 2s, 3s;
+        }
+        .tr1:hover{
+            width:200px;
+            height:200px;
+            background-color: #ff6e5f;
+            transform:rotate(180deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="tr1"><h1>!</h1></div>
+</body>
+</html>

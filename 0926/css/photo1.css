@@ -1,0 +1,268 @@
+*{margin: 0;padding: 0;}
+/* 이렇게 코딩하고 높이가 필요한 부분에 class="cf" 넣기 */
+.cf:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.bigbox{
+  width:1000px;
+  border:5px solid tan;
+  margin: 0 auto; 
+  padding-bottom: 30px;
+}
+.bigbox h2{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.bigbox .box{
+  float:left;
+  border: 5px solid lime;
+  margin-left: 32px;
+  margin-top: 30px;
+  width:200px;
+  height:150px;
+}
+
+.bigbox .box img{
+  display:block;
+  width:100%;
+}
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+.abigbox{
+    width:1000px;
+    border:5px solid tan;
+    margin: 0 auto; 
+    padding-bottom: 30px;
+  }
+  .abigbox h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .abigbox .abox{
+    float:left;
+    border: 5px solid lime;
+    margin-left: 32px;
+    margin-top: 30px;
+    width:200px;
+    height:150px;
+  }
+  
+  .abigbox .abox img{
+    display:block;
+    width:100%;
+  }
+  
+.abox1{overflow:hidden;}
+.abox1 img{
+    transform:scale(1);
+    transition:all 0.3s;
+}
+.abox1:hover img{
+    transform:scale(1.3);
+}
+
+.abox2{overflow:hidden;}
+.abox2{
+    transform:scale(1);
+    transition:all 0.3s;
+}
+.abox2:hover{
+    transform:scale(1.3);
+}
+
+.abox3{overflow:hidden;}
+.abox3 img{
+    transform:scale(1,1);
+    transition:all 0.3s;
+}
+.abox3:hover img{
+    transform:scale(1,1.5);
+}
+/* bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb */
+.bbigbox{
+    width:1000px;
+    border:5px solid tan;
+    margin: 0 auto; 
+    padding-bottom: 30px;
+  }
+  .bbigbox h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .bbigbox .bbox{
+    float:left;
+    border: 5px solid lime;
+    margin-left: 32px;
+    margin-top: 30px;
+    width:200px;
+    height:150px;
+  }
+  .bbigbox .bbox img{
+    display:block;
+    width:100%;
+  }
+
+  .bbox1 img{
+    transform:rotate(0deg);
+    transition:all 0.3s;
+  }
+
+  .bbox1:hover img{
+    transform:rotate(360deg);
+  }
+
+  .bbox2 img{
+    transform:rotateY(0deg);
+    transition:all 0.3s;
+  }
+
+  .bbox2:hover img{
+    transform:rotateY(360deg);
+  }
+
+  .bbox3 img{
+    transform-origin: left top;
+    transform:rotate(0deg);
+    transition:all 0.3s;
+  }
+  .bbox3:hover img{
+    transform:rotate(360deg);
+  }
+
+  .bbox4{
+      /* 원근 */
+    perspective:200px;
+  }
+  .bbox4 img{
+    transform-origin: left top;
+    transform:rotateY(0deg);
+    transition:all 0.3s;
+  }
+  .bbox4:hover img{
+    transform:rotateY(360deg);
+  }
+/* ccccccccccccccccccccccccccccccccccccccccccccc */
+  .cbigbox{
+    width:1000px;
+    border:5px solid tan;
+    margin: 0 auto; 
+    padding-bottom: 30px;
+  }
+  .cbigbox h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .cbigbox .cbox{
+    float:left;
+    border: 5px solid lime;
+    margin-left: 32px;
+    margin-top: 30px;
+    width:200px;
+    height:150px;
+  }
+  
+  .cbigbox .cbox img{
+    display:block;
+    width:100%;
+  }
+
+  .cbox1{
+    position: relative;
+    overflow:hidden;
+  }
+
+  .cbox1 img{
+    position:absolute;
+    top:150px;
+    left:0px;
+    transition: all 0.3s;
+  }
+
+  .cbox1:hover img{
+    top:0;
+  }
+
+  .cbox2{
+    overflow:hidden;
+  }
+
+  .cbox2 img{
+    transform:translate(0,150px);
+    transition: all 0.3s;
+  }
+
+  .cbox2:hover img{
+    transform:translate(0,0px);
+  }
+
+  .cbox3{
+    position:relative;
+    overflow: hidden;
+  }
+  .cbox3::before{
+    content: "before 사용(이미지와겹침)";
+    position: absolute;
+    width: 100%;
+    height:40px;
+    background-color:#333;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    bottom:-40px;
+    left:0;
+  }
+
+  .cbox3:hover::before{
+    bottom:0;
+    transition:all 0.3s;
+  }
+
+  .cbox4{
+   position: relative; 
+  }
+
+  .cbox4::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:100%;
+    background-color: rgba(0, 0, 255, 0.5);
+    top:0;
+    left:0;
+    transition: all 0.4s;
+  }
+  .cbox4:hover::after{
+    width:100%;
+  }
+
+.cbox4 p{
+    width:100%;
+    /* height:70%;
+    padding-top:30%; */
+    height:100%;
+    padding-top:10%;
+    /* padding과 border값을 boxsize에 포함*/
+    box-sizing:border-box;
+    position:absolute;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    top:0;
+    left:0;
+    z-index: 1;
+    /* bacground의 우선순위가 있기때문에 background-color는 지워짐 ->
+        background-img뒤에 선언하면 background-color보임
+    */
+    background-color: rgba(255, 0, 0, 0.5);
+    background:url(../../0925/images/more.png) no-repeat 40% 60%; 
+    opacity: 0;
+    transition: all 0.3s;
+}
+.cbox4:hover p{
+    opacity: 1;
+}

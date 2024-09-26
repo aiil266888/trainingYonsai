@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myball{
+            position:relative;
+            top:400px;
+            width:200px;
+            height: 200px;
+            background: url(../img/bg-main1.png) no-repeat 50% 50%;
+            animation: ball1 4s alternate infinite;
+            /* forwards=도착지점에서 끝남 */
+        }
+
+        @keyframes ball1{
+            0%{top:500px;}
+            100%{top:30px;}
+        }
+
+        #myball2{
+            position:relative;
+            top:500px;
+            left:300px;
+            width:200px;
+            height: 200px;
+            background: url(../img/bg-main1.png) no-repeat 50% 50%;
+            animation: ball2 3s 0.5s alternate infinite;
+        }
+        @keyframes ball2{
+            0%{top:500px;}
+            100%{top:100px;}
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="myball"></div>
+    <div id="myball2"></div>
+</body>
+</html>

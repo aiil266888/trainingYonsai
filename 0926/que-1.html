@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .que1{
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    .que1:hover{
+        background-color: yellow;
+        transition:all 1s;
+    }
+    .que2 img{
+        margin: 20px 0;
+        width:320px;
+        height:240px;
+    }
+    .que2:hover img{
+        transform: rotate(20deg);
+        border:1px solid black;
+        border-radius: 10px;
+    }
+    
+    .que3{
+
+    }
+    .que3:hover img{
+        box-shadow: 5px 5px 3px black;
+        transform-origin: left top;
+        transform:scale(1.5);
+        transition:all 1s;
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="que1"></div>
+
+    <div class="que2">
+        <img src="../img/coffee.jpg" alt="">
+    </div>
+
+    <div class="que3">
+        <img src="../img/lamp.jpg" alt="">
+    </div>
+</body>
+</html>
