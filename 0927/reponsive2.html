@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>      
+        .box{
+            width:25%;
+            height:250px;
+        }
+        .box1{background-color: rgb(255, 232, 168);}
+        .box2{background-color: rgb(135, 197, 255);}
+        .box3{background-color: rgb(160, 197, 185);}
+        .box4{background-color: rgb(221, 153, 173);}
+
+        @media screen and (max-width:600px){
+            .box{float: none; width:100%;}
+        }
+
+        @media screen and (min-width:601px) and (max-width:1023px){
+            .box{float: left; width:50%;}
+
+        }
+
+        @media screen and (min-width:1024px){
+            .box{float:left;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box box1">박스1</div>
+        <div class="box box2">박스2</div>
+        <div class="box box3">박스3</div>
+        <div class="box box4">박스4</div>
+    </div>
+</body>
+</html>
