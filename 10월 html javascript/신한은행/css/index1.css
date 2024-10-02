@@ -4,18 +4,29 @@ ul{list-style:none;}
 a{text-decoration: none; color:#333;}
 
 .wrap{
-    position:relative;
     width:100%;
 }
-.wrap>h3{
+.content{
+    position:relative;
+    width:1400px;
+    height:100%;
+    background-color: yellowgreen;
+}
+.recommend_shop{
+    position:relative;
+    width:1200px;
+    height:90%;
+    margin: 0 auto;
+    background-color:#f6fbfd;
+}
+.recommend_shop>h3{
     font-weight: bold;
 }
-.wrap>h3>span{
+.recommend_shop>h3>span{
     color:goldenrod
 }
 
 .card{
-    margin:0 auto;
 }
 
 .card_section{
@@ -79,4 +90,21 @@ a{text-decoration: none; color:#333;}
 }
 .card_4{
     background-color:#7AE6E9;
+}
+
+
+footer{
+    width:1400px;
+    height:10%;
+    margin:0 auto;
+    background-color:#6a6a6a;
+}
+
+footer ul{
+    font-size:12px;
+}
+
+footer ul li a{
+    display:block;
+    float:left;
 }
