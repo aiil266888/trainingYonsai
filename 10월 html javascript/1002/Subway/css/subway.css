@@ -701,16 +701,100 @@ footer .footer_top{
 footer .footer_bottom{
     position:absolute;
     width:100%;
-    height:140px;
     bottom:0;
+    overflow: hidden;
+    margin-bottom:1px;
     background-color: #292929;
 }
 .footer_bottom .foot_bottom_nav{
+    position:relative;
     width:1300px;
     height:140px;
-    border:1px solid rgb(24, 255, 217);
     margin:0 auto; 
 }
 
+.foot_bottom_nav{
+    padding-left:30px;
+}
+
+.foot_bottom_nav .btm_nav>li{
+    display:block;
+    float:left;
+    width:110px;
+    height:50px;   
+    font-size:13px;
+}
+
+.fbn_02 a{
+    font-weight: bold;
+    color: #ddd!important;
+}
+
+.fbn_03 a{
+    margin-left:20px;
+}
+
+.btm_nav>li>a{
+    line-height:50px;
+    color:#616161;
+}
+
+.office_info{
+    float:left;
+    width:1300px;
+    height:90px;
+    color:#616161;
+    padding-top:20px;
+    line-height: 20px;
+    font-size:13px;
+}
+
+.office_info span.in::before{
+    content: '|';
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 7px;
+}
+
+/* 사이에 선*/
+.footer_bottom_underline{
+    position: absolute;
+    top:55px;
+    left:0px;
+    width:100%;
+    height:0.5px;
+    z-index:15;
+    border-bottom: 1px solid#414141;
+}
 
 /* footer SNS */
+.sns_ico .instagram{
+    position:absolute;
+    top:70px;
+    right:250px;
+    width:50px;
+    height:50px;
+    background:url(../img/icon_sns_instar.png) no-repeat -50px 0px;
+    opacity:0.6;
+    transition: all 0.3s;
+}
+
+.sns_ico .instagram:hover{
+    opacity:1;
+}
+
+
+.facebook{
+    position:absolute;
+    top:70px;
+    right:180px;
+    width:50px;
+    height:50px;  
+    background:url(../img/icon_sns_facebook.png) no-repeat -50px 0px;
+    opacity:0.6;
+    transition: all 0.3s;
+}
+
+.sns_ico .facebook:hover{
+    opacity:1;
+}
