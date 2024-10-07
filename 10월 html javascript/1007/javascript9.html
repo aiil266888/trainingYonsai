@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num1 = 10;
+        var num2 = 30;
+        var result;
+
+        num1--;//9
+        document.write(num1, "<br>");
+
+        num1++;
+        document.write(num1, "<br>");
+
+        //result에 num2를 먼저 넣고 (30)
+        //num2를 ++해준다 (31)
+        result = num2++;
+        document.write("result값: ", result,"<br>");
+        document.write("num2값: ", num2, "<br>")
+
+        result = ++num2; //num2에 먼저 ++해주고 result에 넣어준다 (둘 다 32)
+        document.write("result값: ", result,"<br>");
+        document.write("num2값: ", num2, "<br>")
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
