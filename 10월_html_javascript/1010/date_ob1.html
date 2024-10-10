@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+<body>
+    <h1>
+        <span id="year">0000</span>년
+        <span id="month">00</span>월
+        <span id="date">00</span>일
+        <span id="nday">0</span>요일
+        <span id="hour">00</span>시
+        <span id="minute">00</span>분
+        <span id="second">00</span>초
+    </h1>
+    
+    <script>
+        var today = new Date();
+        //alert(today);//Thu Oct 10 2024 12:09:04 GMT+0900 (한국 표준시)
+        var nowYear = today.getFullYear();
+        var nowMonth = today.getMonth()+1;
+        var nowDate = today.getDate();
+        var nowDay = today.getDay();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+
+        var yoil;
+
+        if(nowDay == 0){
+            yoil = "일";
+        }else if (nowDay ==1){
+            yoil = "월";
+        }else if (nowDay ==2){
+            yoil = "화";
+        }else if (nowDay ==3){
+            yoil = "수";
+        }else if (nowDay ==4){
+            yoil = "목";
+        }else if (nowDay ==5){
+            yoil = "금";
+        }else if (nowDay ==6){
+            yoil = "토";
+        }
+
+        document.write("<h1>오늘 날짜 정보 </h1>");
+        document.write("현재 년도 : " + nowYear, "<br>");
+        document.write("현재 월 : " + nowMonth, "<br>");
+        document.write("현재 일 : " + nowDate, "<br>");
+        document.write("현재 요일 : " + yoil+" 요일", "<br>");
+        document.write("현재 시 : " + h, "<br>");
+        document.write("현재 분 : " + m, "<br>");
+        document.write("현재 초 : " + s, "<br>");
+
+        document.write(nowYear+ "년" + nowMonth+"월" + nowDate+"일"+ yoil+"요일<br>");
+        document.write(`${nowYear}년${nowMonth}월${nowDate}일<br>${h}시${m}분${s}초`);//`로 감싸고 변수앞을 $로 사용
+
+
+        //document.getElementById("year"): html문서에서 id가 year인 요소를 찾는다
+        //.innerHTML: 해당요소의 내부 html을 의미 이 값을 수정하면 해당요소의 내용이 바뀜 0000=>2024로 
+        //nowYear 에 저장된 값을 html요소에 넣는다 
+        // document.getElementById("year").innerHTML = nowYear;
+        document.querySelector('#year').innerHTML = nowYear
+        document.querySelector('#month').innerHTML = nowMonth
+        document.querySelector('#date').innerHTML = nowDate
+        document.querySelector('#nday').innerHTML = yoil
+        document.querySelector('#hour').innerHTML = h
+        document.querySelector('#minute').innerHTML = m
+        document.querySelector('#second').innerHTML = s
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+*{margin:0; padding:0;}
+*{list-style: none; color:#666666; text-decoration: none;} 
+
+.wrap{
+    width:100%;
+    margin:0 auto;
+}
+.head{
+    width:100%;
+    height:70px;
+    background-color: aliceblue;
+    border-bottom: 1px solid green;
+}
+.main{
+    position: relative;
+    width:90%;
+    margin:0 auto;
+}
+
+h1{
+    color:black;
+    font-weight: bold;
+}
+
+.tab{
+    position: absolute;
+    width:80%;
+    left:20px;
+}
+
+.big_group>li{
+    display:block;
+    float:left;
+    width:45%;
+    height:50px;
+    text-align:center;
+    line-height: 50px;
+    border:1px solid #999999;
+}
+.big_group>li>a{
+
+    margin:0 auto;
+}
+
+.recipe{
+    border-radius: 40% 0 0 40%;
+}
+
+
+.solution{
+    border-radius: 0 40% 40% 0;
+}
+.keyword_tab{
+    position:absolute;
+    top:90px;
+    width:100%;
+    height:100px;
+    border-bottom:2px solid #F3F3F3;
+}
+
+.keyword_icon{
+    width:60px;
+    height:60px;
+    background: url(../img/h3icon.png) no-repeat;
+}
+.keyword_tab>h5{
+    position: absolute;
+    top:20px;
+    left:70px;
+}
+.keyword>li{
+    display:block;
+    float:left;
+    width:auto;
+    height:29px;
+    text-align: center;
+    margin: 0px 10px 0 10px;
+    background-color: #F3F3F3;
+    border-radius: 37%;
+}
+.keyword>li>a{
+    margin: 0 10px;
+    font-size:13px;
+    line-height: 29px;
+}
+
+.menu_tab{
+    position: absolute;
+    width:80%;
+    top:199px;
+}
+
+.recipe_list>li{
+    display:inline-block;
+    margin:10px 0;
+}
+.img_card{
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.img_card>img{
+    width:280px;
+    height:280px;
+    background-size: cover;
+    transition: all 0.2s linear;
+    
+}
+
+.img_card>img:hover{
+    transform:scale(1.1);
+}
+
+.cook_title{
+    font-size:15px;
+    font-weight: bold;
+    margin:5px 0;
+}
+.cook_info{
+    font-size:12px;
+}
+.time_info{
+    font-size:12px;
+    display: block;
+    float:left;
+    width:120px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #F3F3F3;
+    margin:10px 10px 0px 0px;
+    border-radius:20%;
+}
+
+span.in::after{
+    content:'|';
+}
