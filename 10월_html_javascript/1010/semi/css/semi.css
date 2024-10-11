@@ -20,6 +20,7 @@
 h1{
     color:black;
     font-weight: bold;
+    margin: 15px 0;
 }
 
 .tab{
@@ -35,26 +36,33 @@ h1{
     height:50px;
     text-align:center;
     line-height: 50px;
+    font-size:14px;
+    font-weight: bold;
     border:1px solid #999999;
 }
 .big_group>li>a{
-
     margin:0 auto;
 }
 
+.big_group>.recipe>a{
+    padding-left:20px;
+    background: url(../img/ic_star_pink.png) no-repeat;
+    background-size:25px 25px;
+    background-position-x:-3px;
+    background-position-y:-2px;
+}
 .recipe{
-    border-radius: 40% 0 0 40%;
+    border-radius: 50px 0 0 50px;
 }
 
-
 .solution{
-    border-radius: 0 40% 40% 0;
+    border-radius: 0 50px 50px 0;
 }
 .keyword_tab{
     position:absolute;
-    top:90px;
+    top:100px;
     width:100%;
-    height:100px;
+    height:110px;
     border-bottom:2px solid #F3F3F3;
 }
 
@@ -65,7 +73,7 @@ h1{
 }
 .keyword_tab>h5{
     position: absolute;
-    top:20px;
+    top:25px;
     left:70px;
 }
 .keyword>li{
@@ -76,7 +84,7 @@ h1{
     text-align: center;
     margin: 0px 10px 0 10px;
     background-color: #F3F3F3;
-    border-radius: 37%;
+    border-radius: 50px;
 }
 .keyword>li>a{
     margin: 0 10px;
@@ -86,13 +94,18 @@ h1{
 
 .menu_tab{
     position: absolute;
-    width:80%;
-    top:199px;
+    width:100%;
+    top:220px;
+}
+
+.recipe_list{
+    width:auto;
+    margin-left:50px;
 }
 
 .recipe_list>li{
     display:inline-block;
-    margin:10px 0;
+    margin:10px 20px;
 }
 .img_card{
     border-radius: 10%;
@@ -129,9 +142,9 @@ h1{
     text-align: center;
     background-color: #F3F3F3;
     margin:10px 10px 0px 0px;
-    border-radius:20%;
+    border-radius:50px;
 }
 
 span.in::after{
-    content:'|';
+    content:' |';
 }

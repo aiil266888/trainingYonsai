@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
- 
+
 </head>
+
 <body>
     <h1>
         <span id="year">0000</span>년
@@ -16,48 +18,49 @@
         <span id="minute">00</span>분
         <span id="second">00</span>초
     </h1>
-    
+
     <script>
 
-        setInterval(auto_time,1000);
+        setInterval(auto_time, 1000);
         //자동 시간
-        function auto_time (){
-        var today = new Date();
-        var nowYear = today.getFullYear();
-        var nowMonth = today.getMonth()+1;
-        var nowDate = today.getDate();
-        var nowDay = today.getDay();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
+        function auto_time() {
+            var today = new Date();
+            var nowYear = today.getFullYear();
+            var nowMonth = today.getMonth() + 1;
+            var nowDate = today.getDate();
+            var nowDay = today.getDay();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
 
-        var yoil;
+            var yoil;
 
-        if(nowDay == 0){
-            yoil = "일";
-        }else if (nowDay ==1){
-            yoil = "월";
-        }else if (nowDay ==2){
-            yoil = "화";
-        }else if (nowDay ==3){
-            yoil = "수";
-        }else if (nowDay ==4){
-            yoil = "목";
-        }else if (nowDay ==5){
-            yoil = "금";
-        }else if (nowDay ==6){
-            yoil = "토";
+            if (nowDay == 0) {
+                yoil = "일";
+            } else if (nowDay == 1) {
+                yoil = "월";
+            } else if (nowDay == 2) {
+                yoil = "화";
+            } else if (nowDay == 3) {
+                yoil = "수";
+            } else if (nowDay == 4) {
+                yoil = "목";
+            } else if (nowDay == 5) {
+                yoil = "금";
+            } else if (nowDay == 6) {
+                yoil = "토";
+            }
+
+
+            document.querySelector('#year').innerHTML = nowYear
+            document.querySelector('#month').innerHTML = nowMonth
+            document.querySelector('#date').innerHTML = nowDate
+            document.querySelector('#nday').innerHTML = yoil
+            document.querySelector('#hour').innerHTML = h
+            document.querySelector('#minute').innerHTML = m
+            document.querySelector('#second').innerHTML = s
         }
-
-
-        document.querySelector('#year').innerHTML = nowYear
-        document.querySelector('#month').innerHTML = nowMonth
-        document.querySelector('#date').innerHTML = nowDate
-        document.querySelector('#nday').innerHTML = yoil
-        document.querySelector('#hour').innerHTML = h
-        document.querySelector('#minute').innerHTML = m
-        document.querySelector('#second').innerHTML = s
-    }
     </script>
 </body>
+
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //HTML과 css를 모두 읽은 뒤 실행   
+        window.onload = function (){
+            autotime();
+            setInterval(autotime,1000);
+            function autotime() {
+                var today = new Date();
+
+                var y = today.getFullYear();
+                var m = today.getMonth() + 1;
+                var d = today.getDate();
+                var n = today.getDay();//요일
+
+                if (n == '0') {
+                    yoil = '일';
+                } else if (n == '1') {
+                    yoil = '월';
+                } else if (n == '2') {
+                    yoil = '화';
+                } else if (n == '3') {
+                    yoil = '수';
+                } else if (n == '4') {
+                    yoil = '목';
+                } else if (n == '5') {
+                    yoil = '금';
+                } else {
+                    yoil = '토';
+                }
+                var h = today.getHours();
+                var ml = today.getMinutes();
+                var s = today.getSeconds();
+                
+                document.getElementById('year').innerHTML = y; //span의 id year대신에 y에 들은 값으로 치환
+                document.querySelector('#year').innerHTML = y
+                document.querySelector('#month').innerHTML = m
+                document.querySelector('#date').innerHTML = d
+                document.querySelector('#nday').innerHTML = yoil
+                document.querySelector('#hour').innerHTML = h
+                document.querySelector('#minute').innerHTML = ml
+                document.querySelector('#second').innerHTML = s
+            } //END autoTime
+            
+            //document.write(`${y}년${m}월${d}일${h}시${ml}분${s}초<br>`);
+            // document.write(y + "년 " + m + "월 " + d + "일 " + yoil + "요일 "+h + "시 " + ml + "분 " + s + "초");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>
+        <span id="year">0000</span>년
+        <span id="month">00</span>월
+        <span id="date">00</span>일
+        <span id="nday">0</span>요일
+        <span id="hour">00</span>시
+        <span id="minute">00</span>분
+        <span id="second">00</span>초
+    </h1>
+</body>
+
+</html>
