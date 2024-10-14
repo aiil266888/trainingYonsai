@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        header{
+        }
+        .slider-container{
+            width:100%;
+            max-width:1920px;
+            height:480px;
+            position:relative;
+        }
+        .slider{
+            display:flex;
+            transition: transform 0.5s;
+        }
+
+        button{
+            cursor:pointer;
+            /* 가짜링크 - 손가락 모양이 나온다 */
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <headfer>
+
+    </headfer>
+    <div class="slide-container">
+        <div class="slide">
+            <img src="images/slide1.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/slide2.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/slide3.jpg" alt="">
+        </div>
+        <button class="prev" onclick="">Provious</button>
+        <button class="next" onclick="">Next</button>
+
+    </div>
+</body>
+</html>
