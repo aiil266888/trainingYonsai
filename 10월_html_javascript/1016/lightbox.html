@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/lightbox.css">
+</head>
+
+<body>
+    <div class="row">
+        <ul>
+            <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic"></li>
+            <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic"></li>
+            <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic"></li>
+            <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic"></li>
+            <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic"></li>
+            <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>
+        </ul>
+    </div>
+    <div id="lightbox">
+        <img src="images/tree-1.jpg" alt="" id="lightboxImage">
+    </div>
+</body>
+
+</html>
+
+<script>
+    //요즘은 querySelectorAll 더 많이 씀
+    //var pics = document.getElementsByClassName("pic")
+    var pics = document.querySelectorAll(".pic")
+    //라이트박스 querySelector("#lightbox")도 가능
+    var lightbox = document.getElementById("lightbox");
+    //라이트박스 안의 이미지 qeurySelecotr ('#lightboxImage')도 가능
+    var lightboxImage = document.getElementById("lightboxImage");
+
+    //모든 pic라는 클래스에 click이벤트 등록
+    pics.forEach(function (pic) {
+        pic.addEventListener("click", function () {
+            //사진을 클릭하면 사진에 들어있는 data-src의 내용을 가져와서 bigLocation에 담는다
+            var bigLocation = this.getAttribute("data-src");
+            //lightboxImage의 src를 위에 저장한 bigLocation(data-src정보)로 바꾼다
+            lightboxImage.setAttribute("src", bigLocation);
+            //위에서 이미지를 바꿨으니 display:none으로 되어있던걸 보이게 바꿔준다
+            lightbox.style.display = "block";
+        });
+    });
+
+
+    //다시보이기 방법1
+    document.getElementById("lightbox").addEventListener("click", function(){
+        lightbox.style.display = "none";
+    });
+    
+    //다시보이기 방법2
+    // lightbox.onclick = function(){
+    //     lightbox.style.display = "none";
+    // }
+
+    //다시보이기 방법3
+    // lightbox.addEventListener("click",function(){
+    //     lightbox.style.display:'none';
+    // });
+</script>

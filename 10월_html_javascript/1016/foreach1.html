@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    var numbers = [1,2,3,4,5];
+    var sum = 0;
+    // for(var i = 0; i<numbers.length; i++){
+    //     sum = sum+numbers[i];
+    //     document.write(numbers[i], "<br>");
+    // }
+    // document.write(sum,"<br>");
+
+
+////////////////////////forEach문////////////////////////////////////
+    numbers.forEach(function(susu){
+        document.write(susu,"<br>");
+    });
+
+    //1.numbers라는 배열 선언
+    //2. foreach 메서드 실행
+    // numbers배열에 대해순회 시작
+    // 각 요소에 대해 function(susu)함수가 실행
+    // susu 현재 순회중인 요소의 값이 저장 (1,2,3,4,5)
+
+
+    numbers.forEach(function(addNum){
+        sum += addNum;
+        document.write(sum,"<br>");
+    })
+
+
+</script>

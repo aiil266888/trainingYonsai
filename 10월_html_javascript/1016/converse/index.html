@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width:1440px;
+            height:600px;
+            /* border:1px solid red; */
+            margin:0 auto;
+        }
+        .card_section{
+            display:flex;
+            flex-wrap: wrap;
+        }
+        .card{
+            display:block;
+            float: left;
+        }
+        .card_1{
+            width:480px;
+            height:600px;
+            /* border:1px solid blue; */
+            box-sizing: border-box;
+            background: url(img1.jpg) no-repeat;
+            background-size:cover;
+        }
+        .card_2{
+            width:480px;
+            height:600px;
+            /* border:1px solid green; */
+            box-sizing: border-box;
+            background-color: #eee;
+        }
+        .card_3{
+            width:480px;
+            height:600px;
+            /* border:1px solid yellow; */
+            box-sizing: border-box;
+            background: url(img2.jpg) no-repeat;
+            background-size:cover;
+            text-align: center;
+        }
+        .infor{
+            margin-top:200px;
+            text-align: center;
+        }
+        .buy_button{
+            display:inline-block;
+            width:180px;
+            height:50px;
+            background-color: black;
+            transition:all 0.4s;
+        }
+        .buy_button:hover{
+            background-color:#5a5a5a;
+        }
+        h1{
+            font-size:50px;
+        }
+        a{
+            text-decoration: none; color:white; font-weight: bold; font-size:15px;
+            text-align: center; line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="card_section">
+                <div class="card_1 card"></div>
+                <div class="card_2 card">
+                    <div class="infor">
+                        <p>FOR MEN</p>
+                        <h1>Run Star Trainer</h1>
+                        <p>컨버스 스타 쉐브론 라인의 새로운 실루엣<br>
+                            런스타 트레이너
+                        </p>
+                        <a href=""><div class="buy_button">구매하기</div></a>
+                    </div><!--END infor-->
+                </div>
+                <div class="card_3 card"></div>
+        </div><!--ENd card_section-->
+    </div><!-- END wrap-->
+</body>
+</html>
