@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //자바스크립트의 함수 : 코드를 재사용하고 관리하는 효율적 방법
+
+        //매개변수가 있는 함수 -정의
+        function addNum(a,b){
+            return a+b;
+        }
+        //함수 호출
+        let result = addNum(5,3);
+        let result1 = addNum(1111,22222);
+        document.write(result + " "  + result1, "<br>");
+
+
+
+        //매개변수가 없는 함수 -정의
+        function sayHello(){
+            document.write("HELLO WORLD","<br>");
+        }
+        //함수호출
+        sayHello();
+
+
+        //익명함수 - 정의
+        let multiply = function(x,y){
+            return x * y;
+        }
+        //함수호출
+        document.write("multiply =" + multiply(4,5));
+
+        //익명함수 간결하게 표현
+        let divide = ( x , y ) => x / y;
+        document.write("divide= " + divide(4,8));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

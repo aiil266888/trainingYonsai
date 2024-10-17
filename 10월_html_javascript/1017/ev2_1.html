@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:Arial, sans-serif;
+            text-align: center;
+            margin-top:50px;
+        }
+        .btn{
+            display:inline-block;
+            padding:10px 20px;
+            margin: 10px;
+            border: 2px solid #333;
+            border-radius:5px;
+            background-color: #f1f1f1;
+            cursor:pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn.active{
+            background-color: #333;
+            color: #fff;
+            border-color:#555;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn" id="btn1">Button1</div>
+    <div class="btn" id="btn2">Button2</div>
+    <div class="btn" id="btn3">Button3</div>
+</html>
+<script>
+
+
+//버튼3개 전부 선택
+let btns = document.querySelectorAll(".btn");
+
+btns.forEach(function(btn){
+    btn.addEventListener('click',function(){
+        btns.forEach(function(btn){
+            btn.classList.remove('active');
+        });
+
+        //클릭한 버튼에 'active' 클래스 추가
+        this.classList.add('active');
+    })
+})
+
+</script>

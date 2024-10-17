@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 400px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .rect {
+            width: 100px;
+            height: 100px;
+            margin: 30px auto;
+            border: 1px solid #222;
+            transition: 1s;
+        }
+
+        ul {
+            list-style: none
+        }
+
+        .active{
+            border-radius:50%;
+            background-color:aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <p>도형 클릭</p>
+
+        <ul>
+            <li class="rect"></li>
+            <li class="rect"></li>
+            <li class="rect"></li>
+            <li class="rect"></li>
+            <li class="rect"></li>
+        </ul>
+    </div><!--E ND container-->
+</body>
+
+</html>
+
+<script>
+    var rects = document.querySelectorAll('.rect');
+    //여러개의 클래스 선택자를 등록 querySelectorAll
+
+
+    rects.forEach(function(rect){
+        rect.addEventListener('click',function(){
+            rects.forEach(function(rect){
+                rect.classList.remove('active');
+            });
+
+            //클릭한 도형에 'active' 클래스 추가
+            this.classList.add('active');
+        })
+    })
+</script>
