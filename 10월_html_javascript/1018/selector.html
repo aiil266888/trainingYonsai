@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 선택자 </title>
+</head>
+<body>
+    <div id="myDiv">Hello, World!</div>
+
+    <div class="myClass">First Div</div>
+    <div class="myClass">Second Div</div>
+
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+
+    <div class="myDiv">First Div</div>
+    <div class="myDiv">Second Div</div>
+    
+    <img src="images/coffee-pink.jpg" alt="Sample Image" id="myImage">
+
+    <div id="parent">
+        <p id="child">Hello!</p>
+    </div>
+
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <div class="container">
+        <p id="myPara">Some text</p>
+    </div>
+
+</body>
+</html>
+<script>
+
+    //1. getElementById() 특정 ID <여기서는"myDiv"> 를 가진 요소를 선택한다 
+    const elementId = document.getElementById("myDiv");
+    console.log(elementId.textContent); // "Hello, World!" 출력
+
+    //2. getElementsByClassName() 특정 Class를 가진 요소를 선택한다 
+    const elementClass = document.getElementsByClassName("myClass");
+    console.log(elementClass[0].textContent); // "First Div" 출력
+    console.log(elementClass[1].textContent); // "Second Div" 출력 이렇게 첫번째 두번째도 고를수있음 ㅇㅇ
+    const elementAll = document.querySelectorAll(".myClass");
+
+    //3. getElementsByTagName() 특정 태그를 가진 요소 선택 예제는 p태그 
+    const paragraphs = document.getElementsByTagName("p");
+    console.log(paragraphs.length); //출력 2 나옴 (두개니까)
+    console.log(paragraphs[0].textContent); //Paragraph 1 출력됨
+
+    //4. querySelector() CSS 선택자를 사용하여 첫 번째로 일치하는 요소 하나를 선택, Class, ID, Tag 등을 조합한 CSS 선택자 사용 가능
+    const element = document.querySelector(".myDiv"); // 첫 번째 myDiv 요소 선택
+    console.log(element.textContent); // "First Div" 출력
+
+    //5. querySelectorAll() 
+    const elements = document.querySelectorAll(".myDiv"); // 모든 .myDiv선택해서 Foreach로 한번에 출력
+    elements.forEach(function(e1){
+        console.log(e1.textContent);
+    })
+
+    //6. getAttribute() 및 setAttribute() 선택한 요소의 속성 값을 읽거나 설정 
+    const img = document.getElementById("myImage");//getAttribute
+    const srcValue = img.getAttribute("src");
+    
+    console.log(srcValue); // images/coffee-pink.jpg 뜸 
+
+    img.setAttribute("src", "images/coffee-blue.jpg");//setAttribute ->핑끠커피이미지 파랑으로 바뀜
+    const srcValueNew = img.getAttribute("src");
+    console.log(srcValueNew); // images/coffee-blue.jpg 뜸 
+
+    //7. parentNode, children, nextElementSibling, previousElementSibling 요소간의 관계를 선택
+    //부모요소 선택 
+    const child = document.getElementById("child");
+    const parent = child.parentNode;
+    console.log(parent.id); // "parent" 출력
+    //자식요소 선택
+    const list = document.getElementById("myList");
+    const children = list.children;
+    console.log(children[0].textContent); // "Item 1" 출력
+    
+    //8.closest() 선택한 요소에서 가장 가까운 상위 요소를 찾는다/ 주어진 CSS선택자에 일치하는 요소를 찾는다
+    const para = document.getElementById("myPara");
+    const closestDiv = para.closest(".container");
+    console.log(closestDiv.className); // "container" 출력
+
+
+</script>

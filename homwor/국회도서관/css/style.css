@@ -1,0 +1,100 @@
+*{margin:0; padding:0;}
+ul{list-style:none; }
+a{text-decoration:none; color:#333;}
+
+
+/*---------------------탭---------------------------*/
+.tabWrap{
+    width:405px;
+    height:340px;
+}
+
+.tab_menu>li>a{
+    margin:1px;
+    float:left;
+    background-color: #ccc;
+    border-radius: 2px;
+    width:130px;
+    height:50px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+}
+.active{
+    background-color:#32557F!important;
+    color: white;
+}
+
+#tabContent{
+    float:left;
+    margin:1px;
+    width:400px;
+    height:250px;
+    border:1px solid #bbb;
+    border-radius:5px;
+}
+.tab_style{
+    padding:10px;
+ 
+}
+
+.tab_style>ul>li{
+    font-weight: bold;
+    margin:21px 5px;
+} 
+.tab_style>ul>li>a>p{
+    width:350px;/* 오버되면 말줄임 ㄱ*/
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+
+#tabs2{
+    display:none;
+}
+
+
+/*------------------ 스크롤-----------------------------*/
+.scrollWrap{
+    margin:20px;
+    width:800px;
+    height:500px;
+    border: 1px solid  salmon;
+    
+}
+
+/*이미지 사이즈 다 달라서 맞춰줘야댐 ㅡㅡ */
+#banner>li>a>img{
+    width:720px;
+    height:350px;
+    float:left;
+}
+
+.frame{
+    position:relative;
+    margin:75px 40px;
+    width:720px;
+    height:350px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.frame_shadow{
+    position:absolute;
+    width:720px;
+    height:50px;
+    top:300px;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.575);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 10;
+}
+
+/*사진 전체 부분*/
+#banner{
+    width:3600px;
+    height:350px;
+}
+
