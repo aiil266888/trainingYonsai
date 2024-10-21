@@ -80,7 +80,7 @@ a{text-decoration:none; color:#333;}
     border-radius: 20px;
     overflow: hidden;
 }
-.frame_shadow{
+.frame_shadow{ 
     position:absolute;
     width:720px;
     height:50px;
@@ -98,3 +98,4 @@ a{text-decoration:none; color:#333;}
     height:350px;
 }
 
+    
