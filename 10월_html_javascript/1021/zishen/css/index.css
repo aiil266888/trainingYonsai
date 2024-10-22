@@ -2,6 +2,11 @@
 *ul{list-style: none;}
 a{text-decoration: none; }
 
+body{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px; 
+}
+
 .wrap{
     width:100%;
     height:auto;
@@ -10,7 +15,6 @@ a{text-decoration: none; }
     position:relative;
     width:100%;
     height:80px;
-    background-color: pink;
 }
 .header_top .logo{
     position:absolute;
@@ -49,17 +53,27 @@ a{text-decoration: none; }
     right:5%;
     top:10%;
 }
-.header_top 
+
 /* ------------네비게이션 -------------*/
 .navigate{
+    position: relative;
     width:100%;
     height:60px;
+    margin:0 auto;
+}
+.navigate>ul{
+    position:absolute;
 }
 .navigate>ul>li{
-    display:block;
-    float:left;
-    margin:3px 10px;
+    position: relative;
+    display: inline-block;
+    margin-left: 61px;
 }
+/* .navigate>ul>li{
+    display: inline-block;
+    margin:3px 10px;
+} */
+
 .sub>li{
     display:none;
 }

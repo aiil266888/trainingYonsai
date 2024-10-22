@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="main_box">
+            <div class="logo"><img src="img/intro_logo.png" alt=""></div>
+            <div class="info_box">
+                <img src="img/intro_img.png" alt="">
+                <p><span>이탈리안 파스타의 캐주얼한 해석</span></p>
+                <p>본질만 담은 합리적인 가격으로 맛있는 파스타와 잔와인까지,<br/>
+                    부담없이 즐기고 가실 수 있는 곳입니다.
+                </p>
+            </div>
+            <div class="button_box">
+                <div class="btn button1"><a href="#"><img src="img/intro_slide_ico1.png" data-src="img/intro_slide_ico1_on.png" alt=""><p>좋은 식재료</p></a></div>
+                <div class="btn button2"><a href="#"><img src="img/intro_slide_ico2.png" data-src="img/intro_slide_ico2_on.png" alt=""><p>스마트한 가격</p></a></div>
+                <div class="btn button3"><a href="#"><img src="img/intro_slide_ico3.png" data-src="img/intro_slide_ico3_on.png" alt=""><p>트렌디한 음식</p></a></div>
+                <div class="btn button4"><a href="#"><img src="img/intro_slide_ico4.png" data-src="img/intro_slide_ico4_on.png" alt=""><p>분위기 있는 공간</p></a></div>
+            </div>
+        </div><!--END main-box-->
+    </div><!--END wrap (전체)-->
+</body>
+</html>
+<script>
+    const targetLink = document.querySelectorAll('.btn img'); //이미지 전체 
+
+    targetLink.forEach(function(link){
+        link.addEventListener('mouseover',function(){
+            var changeBtn = this.getAttribute("data-src");//바꿀 사진주소 담기
+            var originBtn = this.getAttribute("src");//원래 사진주소 담기
+            
+            link.setAttribute("src",changeBtn); //mouseover하면 사진바꾸기
+
+            link.addEventListener('mouseout',function(){ //mouseout하면 원래사진으로 돌아오기
+            link.setAttribute("src",originBtn);
+        })
+        })
+
+
+    })
+</script>
