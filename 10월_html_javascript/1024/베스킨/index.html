@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+<style>
+     * {margin: 0;padding: 0;}
+    body{background-color: #333;}
+    div{
+        width:395px;
+        height:160px;
+        margin: 50px auto 0;
+        overflow:hidden;
+    }
+    dl{
+        width:395px;
+        height:160px;
+    }
+    dt{
+        background: url(blue01.png) no-repeat 0 0;
+        width: 25px;
+        height: 160px;
+        float:left;
+    }
+    dt span{
+        display:block;
+    }
+
+    dt.over {
+        background: url(orange01.png) no-repeat 0 0;
+        }
+    dt.selected {
+        background: url(pink01.png) no-repeat 0 0;
+    }
+
+    dd{
+        float:left;
+        width:320px;
+        height:160px;
+        transition:all 0.4s;
+    }
+    dd img{width:320px; height:160px;}
+</style>
+</head>
+<body>
+    <div>
+        <dl>
+            <dt class="step1"><span>01</span></dt>
+            <dd><img src="menuimg01.jpg" alt=""></dd>
+            <dt class="step2"><span>02</span></dt>
+            <dd><img src="menuimg02.jpg" alt=""></dd>
+            <dt class="step3"><span>03</span></dt>
+            <dd><img src="menuimg03.jpg" alt=""></dd>
+        </dl>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    $(function(){
+        //첫 번째 dd빼고 다 넓이 0 
+        $('dd:not(:first)').css('width', '0px');
+        $('dt:first').addClass('selected');
+
+        $('dl dt').click(function(){
+            //만약 누른거 넓이가 0이면 
+            if($(this).next('dd').css('width') == '0px'){
+                //싹다 0으로만들고
+                $('dd').css('width','0px');
+                //누른거만 넓이 320으로 
+                $(this).next('dd').css('width','320px');
+                $('dt').removeClass('selected');
+                $(this).addClass(('selected'));
+            }
+        });
+
+        $('dl dt').mouseover(function(){
+            $(this).addClass('over');
+        });
+        $('dl dt').mouseout(function(){
+            $(this).removeClass('over');
+        });
+    });
+</script>
