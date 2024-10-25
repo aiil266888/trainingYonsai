@@ -57,7 +57,7 @@
 <body>
     <div class="wrap">
         <div class="screen"> 
-            <ul>
+            <ul id="img_list">
                 <li><img src="img/p1.jpg" alt=""></li>
                 <li><img src="img/p2.jpg" alt=""></li>
                 <li><img src="img/p3.jpg" alt=""></li>
@@ -77,5 +77,44 @@
 </html>
 
 <script>
-    
+        var num = 0;
+        var li_width = 960;
+        //#banner li중 3보다 작은 0,1,2번 이미지 복사해서 copy_img에 넣음
+        var copy_img = $('#img_list li:lt(3)').clone();
+
+        $('#img_list').append(copy_img);
+
+        $('.next').click(function () {
+            if (num == 4) {
+                num = 0;
+                $('#img_list').css('margin-left', '0');
+            }
+            num++;
+            $('#img_list').stop().animate({ 'margin-left': -li_width * num }, 300);
+            return false;
+        });
+        //prev버튼
+        $('.prev').click(function () {
+            if (num == 0) {
+                num = 4;
+                $('#img_list').css('margin-left', -li_width * num);
+            }
+
+            num--;
+            $('#img_list').stop().animate({ 'margin-left': -li_width * num }, 300);
+            return false;
+        });
+
+        //자동슬라이드
+        function autoplay() {
+            if (num == 4) {
+                num = 0;
+                $('#img_list').css('margin-left', '0');
+            }
+            num++;
+            $('#img_list').stop().animate({ 'margin-left': -li_width * num }, 300);
+            return false;
+        }
+        setInterval(autoplay, 3000);  
+   
 </script>

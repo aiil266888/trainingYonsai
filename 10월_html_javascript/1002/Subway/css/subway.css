@@ -169,26 +169,29 @@ nav ul:hover li ul{
 nav ul:hover + .shadow{
     height:250px;
 }
+.wrap{
+    width:1920px;
+}
 
-section{width:100%;}
+#section01{
+    width:7680px;
+    height:440px;
+    margin:0 auto;
+}
 .slide{
-    height:440px;
-    width:100%;
-    position:relative;
-}
-.slide .sg{
+    position: relative;
     width:1920px;
     height:440px;
-    position:relative;
-    margin: 0 auto;
+    box-sizing: border-box;
     overflow: hidden;
+
 }
-.slide .sg a{
+.slide li a{
+    position:absolute;
+    float:left;
     width:1920px;
     height:440px;
-    position:absolute;
-    left:0; 
-}
+}   
 .slide .sg a.i_01{
     background: url(../img/00_써브웨이_main_02_20200427112753722.jpg) no-repeat center;
 }
@@ -214,7 +217,7 @@ section{width:100%;}
     margin-left:500px;
 }
 
-.slide .dot a{
+.slide .dot li{
     float: left;
     text-indent:-9999px;
     display: block;
@@ -225,7 +228,7 @@ section{width:100%;}
     border-radius: 30px;
 }
 
-.slide .dot a.on{
+.slide .dot li.on{
     background-color: yellow;
     width:30px;
 }

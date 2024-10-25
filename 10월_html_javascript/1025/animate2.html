@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <style>
+        #box2{
+            width:100px;
+            height:100px;
+            background-color:yellow;
+            position:relative;
+        }
+    </style>
+
+    <script>
+        $(function(){
+            $("#rightBtn").click(function(){
+                $('#box2').animate({left:"+=100px"},500); //left =left+100
+            });
+            $("#leftBtn").click(function(){
+                $('#box2').clearQueue().animate({left:"-=100px"},500); //left =left-100
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="box2">박스2</div>
+    <p>
+        <button id="leftBtn">left</button>
+        <button id="rightBtn">right</button>
+    </p>
+</body>
+</html>
