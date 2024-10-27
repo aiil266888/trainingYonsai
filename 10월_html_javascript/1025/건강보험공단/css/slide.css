@@ -1,0 +1,85 @@
+*{margin:0;padding:0;}
+li{list-style: none;}
+.wrap1{
+    border:1px solid black;
+    width:100%;
+    height:50%;
+}
+
+.box1{
+    position: relative;
+    margin:30px auto;
+    width:410px;
+    height:332px;
+    background-color: #FEEEE6;
+    border-radius: 10px;
+}
+.top_left_img{
+    width:105px;
+    height:104px;
+    background: url(../img/bg_app.png) no-repeat 0 0;
+}
+
+.top_menu{
+    position:absolute;
+    top:10px;
+    left:0;
+    width:100%;
+    height:50px;
+}
+.zone{
+    float:left;
+    margin-left:40px;
+    width:70px;
+    height:50px;
+    font-size:20px;
+    font-weight: bold;
+    line-height:60px;
+}
+
+.index_text{
+    float:left;
+    margin-left:100px;
+    width:60px;
+    height:50px;
+    text-align:center;
+    line-height:60px;
+}
+
+.slide_btn{
+    float:left;
+    width:120px;
+    height:50px;
+}
+.slide_btn li{
+    float:right;
+    margin:20px 5px 20px 5px;
+    width:16px;
+    height:16px;
+}
+
+li.btn_left{background:url(../img/ico_16_next.png) no-repeat 0 0;}
+li.btn_stop{background:url(../img/ico_16_pause.png) no-repeat 0 0;}
+li.btn_stop.on{background:url(../img/ico_16_play.png) no-repeat 0 0;}
+li.btn_right{background:url(../img/ico_16_prev.png) no-repeat 0 0;}
+
+
+/* 이미지 사이즈 350 234*/
+.slide_screen{
+    position: absolute;
+    top:70px;
+    left:30px;
+    border-radius: 10px;
+    width:350px;
+    height:234px;
+    /* overflow: hidden; */
+}
+
+.slide_list{
+    width:1400px;
+    height:234px;
+}
+
+.slide_screen li{
+    float:left;
+}
