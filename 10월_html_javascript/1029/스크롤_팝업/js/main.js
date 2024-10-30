@@ -14,7 +14,7 @@ $(function(){
 
        $('#floatdiv').stop().animate({top:dTop+sct},500);
 
-       //for문으로 만들기
+       //아래꺼 for문으로 만들기
        for(var x = 0; x<6; x++){
             if(sct >= $('section>div').eq(x).offset().top){
                 $('nav ul li').removeClass('on');
@@ -23,8 +23,6 @@ $(function(){
                 $('#floatdiv ul li').eq(x).addClass('on');
         }
        }
-
-
     //    if(sct >= $('section>div').eq(0).offset().top){
     //     $('nav ul li').removeClass('on');
     //     $('nav ul li').eq(0).addClass('on');

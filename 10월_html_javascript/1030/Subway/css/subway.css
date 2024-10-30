@@ -1,0 +1,788 @@
+/* reset css */
+*{margin:0; padding:0;}
+ul{list-style:none;}
+a{text-decoration: none; color:#333;}
+
+.cf::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+
+body{
+    /* 반응형 만들 때 반드시 필수 */
+    overflow-x:hidden;
+}
+
+header{
+    width:100%;
+    height:165px;
+    border-top:5px solid #009223;
+    position:relative;
+    z-index:10;
+}
+
+#h_top{
+    width:1200px;
+    height:90px;
+     /* 중앙정렬 */
+    margin: 0 auto;
+}
+
+#h_top>a{
+    position: absolute;
+    /* margin: 0 auto 로 중앙정렬 할 수 없음*/
+    width:202px;
+    height:40px;
+    border:1px solid red;
+    top:25px;
+    left:50%;
+    transform: translate(-50%, 0);
+    /* 중앙정렬 */
+}
+
+#h_top>a img{
+    display:block;
+    width: 100%;
+}
+
+#h_top ul{
+    /* 
+    헤더가 relative이므로 안됨
+    position:absolute;
+    right:0;
+    top:30px; */
+
+    /* #h_top의 오른쪽으로 배치*/
+    float:right;
+    margin-top:30px;
+}
+
+
+/* 일렬로 배치 */
+#h_top ul li{
+    float:left;
+    margin-left:15px;
+}
+
+#h_top ul li a{
+    display:block;
+    height:20px;
+    padding:5px 13px;
+}
+
+/* li중 3번째의 a */
+/* #h_top ul li:nth-child(3) a{} */
+
+#h_top ul li a.earth{
+    width:32.5px;
+    /* 내어쓰기 - 글자를 숨길 수 있다 */
+    text-indent:-9999px;
+    padding: 5px 0;
+    background:url(../img/icon_global_subway.png) no-repeat center;
+    
+}
+
+nav{
+    width:100%;
+    height:75px;
+    border-bottom:1px solid #ddd;
+    box-sizing:border-box;
+}
+
+nav > ul {
+    /* 중앙정렬을 해야하므로 넓이를 지정 */
+    width:1200px;
+    height:75px;
+    margin:0 auto;
+    text-align:center;
+    padding:0 100px;
+    box-sizing: border-box;
+    position:relative;
+    z-index:15;
+}
+
+nav > ul > li{float: left;}
+
+nav > ul >li >a{
+    /* 대표메뉴 a */
+    display:block;
+    width:200px;
+    height:75px;
+    font-size:18px;
+    font-weight:bold;
+    line-height:75px;
+}
+
+nav ul ul a{
+    font-size:15px;
+    color:#666;
+    padding:8px 0 9px;
+    display:block;
+    letter-spacing: -0.05;
+    /* 글자간격 */
+    font-weight: bold;
+}
+
+nav ul li ul li{
+    width: 200px
+}
+
+nav ul li ul{
+    position:absolute;
+    top:75px;
+    text-align:center;
+    height:0;
+    overflow:hidden;
+
+    /* height:0; overflow:hidden;
+        0이상이면 숨긴다 (하위메뉴가 안보임)
+    */
+    transition:all 0.2s;
+    padding-top:20px;
+    z-index:15;
+}
+
+nav ul:hover li ul{
+    height: 200px;
+}
+
+.shadow{
+    position:absolute;
+    left:0;
+    top:165px;
+    /* header가 relative이므로 위에서 부터 165떨어진 곳에
+        .shadow가 펼쳐져야함
+    */
+    width:100%;
+    background-color: #fff;
+    height:0px;
+    transition: all 0.2s;
+}
+    /*
+    nav > ul 과 shadow가 형제
+    둘 다 position을 가지고 있음
+    shadow 가 nav> ul보다 나중에 만들어졌으므로 메뉴가 안보인다
+    해결책 nav>ul 에 z-index을 준다
+    */
+
+nav ul:hover + .shadow{
+    height:250px;
+}
+.wrap{
+    width:1920px;
+}
+
+#section01{
+    width:7680px;
+    height:440px;
+    margin:0 auto;
+}
+.slide{
+    position: relative;
+    width:1920px;
+    height:440px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+.slide li a{
+    position:absolute;
+    float:left;
+    width:1920px;
+    height:440px;
+}   
+
+.slide .dot{
+    position:absolute;
+    left:50%;
+    bottom:30px;
+    width:100px;
+    height:10px;
+    margin-left:500px;
+}
+
+.slide .dot li{
+    float: left;
+    text-indent:-9999px;
+    display: block;
+    width:10px;
+    height:10px;
+    background-color: #ddd;
+    margin: 0 5px;
+    border-radius: 30px;
+}
+
+.slide .dot li.on{
+    background-color: yellow;
+    width:30px;
+}
+
+#sub{
+    width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+    position: relative;
+}
+
+#sub .sub_wrap{
+    position:absolute;
+    right:-10px;
+    top:-20px;
+}
+
+#sub .sub_wrap a {
+    display: block;
+    width: 300px;
+    height:80px;
+    float:left;
+    font-size:22px;
+    font-weight:bold;
+    box-sizing:border-box;
+    padding-top:20px;
+}
+
+.sw_left{
+    padding-left: 130px;
+    border-radius:30px 0 0 0;
+    color:#292929;
+    background: #ffce32 url(../img/icon_map.png) no-repeat 35% 50%; 
+}
+
+.sw_right{
+    padding-left: 90px;
+    border-radius:0 0 30px 0;
+    color: #fff;
+    background: #009223 url(../img/icon_franchise.png) no-repeat 20% 50%;
+}
+
+.section02{
+    width:100%;
+}
+.s02_wrap{
+    width:1200px;
+    height:560px;
+    margin:0 auto;
+    padding-top: 60px;
+    position:relative;
+}
+
+/* 탭메뉴 */
+.menu_top{
+    width:1200px;
+    height:77px;
+    background:url(../img/bul_tit.png) no-repeat 0% 50%;
+}
+
+.menu_top h3{
+    height:77px;
+    padding:12px 0 0 25px;
+    font-size:40px;
+    box-sizing:border-box;
+    width:50%;
+    float:left;
+}
+
+.menu_top .mt_right{
+    float:right;
+    margin-top:30px;
+}
+.menu_top .mt_right li{ 
+    float:left;
+    padding-right:25px;
+    margin-right:23px;
+    position: relative;
+}
+
+.menu_top .mt_right li a.on{
+    color: #009223;
+}
+
+.menu_top .mt_right li::after{
+    content: '';
+    width:1px;
+    height:15px;
+    background-color:#979797;
+    position:absolute;
+    right:0;
+    top:3px;
+}
+
+/* 아침메뉴 옆에 선 없애기 */
+.menu_top .mt_right li:nth-child(4):after{
+    display: none;
+}
+
+.menu_top .mt_right li a{
+    display:block;
+    font-size:16px;
+    color:#666;
+    font-weight: bold;
+}
+
+/* 샌드위치 나열 */
+.menu_wrap .menu{
+    width:1200px;
+    height:320px;
+    margin-top:33px;
+    padding-left:30px;
+    overflow:hidden;
+}
+
+.menu ul li{
+    width: 260px;
+    height:320px;
+    float:left;
+    padding: 0 5px;
+    text-align:center;
+    margin-right:30px;
+    position:relative;
+}
+
+.menu ul li::after{
+    content:'';
+    width:98px;
+    height:98px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    background: url(../img/btn_more.png) no-repeat 0 0;
+    margin: -22px 0 0 -22px;
+    opacity:0;
+}
+
+.menu ul li:hover::after{
+    opacity: 1;
+}
+
+/* .menu ul li:first-child{margin-left:0;} */
+.menu ul li img{
+    width:100%;
+    height:182px;
+}
+
+.menu ul li p{
+    font-size:13px;
+    color:#999;
+    letter-spacing: -0.04em;
+}
+
+.menu ul li strong{
+    display:block;
+    margin:2px 0 10px;
+    text-align: center;
+}
+
+.menu ul li:hover img{
+    width:350px;
+    height:238px;
+}
+
+.menu ul li:hover strong{
+    font-size:22px;
+    margin-top:-10px;
+}
+
+.menu ul li:hover p{ opacity: 0;}
+
+.s02_wrap a.prev{
+    display:block;
+    position:absolute;
+    top:50%;
+    left:-150px;
+    width:50px;
+    height:50px;
+    border:1px solid #333;
+    background:url(../img/icon_event_slider_arr.png) no-repeat 0 0;
+}
+
+.s02_wrap a.prev:hover{
+    background-position: 0 -50px;
+}
+
+.s02_wrap a.next{
+    display:block;
+    position:absolute;
+    top:50%;
+    right:-150px;
+    width:50px;
+    height:50px;
+    border:1px solid #333;
+    /* prev글씨 안보이게 */
+    background:url(../img/icon_event_slider_arr.png) no-repeat -50px 0;
+}
+
+.s02_wrap a.next:hover{
+    background-position: -50px -50px;
+}
+
+/* section 03 */
+#section03{
+    width:100%;
+    height:790px;
+    background:url(../img/bg_content.gif) repeat 0 0;
+}
+
+.s03_wrap{
+    width:1300px;
+    height:790px;
+    margin: 0 auto;
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+
+.content{
+    width:100%;
+    height:300px;
+}
+.cont_01{
+    float:left;
+    width:400px;
+    height:100%;
+    background: url(../img/bg_utilization.png) no-repeat 0 0;
+    margin-left: 55px;
+    position:relative;
+}
+.cont_02{
+    float:right;
+    width:825px;
+    height: 100%;
+    background: url(../img/img_subway_history.png) no-repeat 0 0;
+    position:relative;
+}
+
+.con_top h3{
+    height:80px;
+    font-size:28px;
+    font-weight:bold;
+    color:#fff;
+    line-height:40px;
+    letter-spacing: -0.03em;
+}
+
+.cont_01 h3{ 
+    position:absolute;
+    left:39px;
+    top:39px;
+}
+
+.cont_02 h3{
+    position: absolute;
+    left:410px;
+    top:38px;
+}
+
+.con_top a{
+    display:inline-block;
+    height:36px;
+    line-height:36px;
+    padding: 0 8px;
+    border: 1px solid #fff;
+    border-radius:20px;
+    color:#fff;
+    text-align:center;
+    font-size:16px;
+}
+
+.cont_01 .con_a a{
+    position:absolute;
+    left:41px;
+    bottom:42px;
+}
+
+.cont_02 .con_a a{
+    position:absolute;
+    left:410px;
+    bottom:42px;
+}
+
+.cont_bott{
+    margin-top:30px;
+}
+
+.cont_03{
+    float:left;
+    width:870px;
+    height:100%;
+    background-color:#fff;
+    margin-left:55px;
+    position:relative;
+    border-radius:30px 0 30px 0;
+}
+
+.cont_03 .new{
+    float:left;
+    margin-top:75px;
+    margin-left:60px;
+}
+
+.cont_03>.new>h2{
+    width:270px;
+    height:90px;
+    padding-left:30px;
+    line-height: 80px;
+    font-size:30px;
+    font-weight: bold;
+    background:url(../img/bul_tit.png) no-repeat 0px 0px;
+}
+.cont_03 .new p{
+    position:absolute;
+    top:150px;
+    left:75px;
+    font-size:16px;
+    color:#666;
+    font-weight: bold;
+    text-align:center;
+}
+
+.cont_03 ul{
+    float:left;
+    margin-top: 76px;
+    margin-left:100px;
+}
+
+.cont_03 ul li a{
+    display:inline-block;
+    font-size:16px;
+    counter-reset: #292929;
+    letter-spacing:0.04em;
+    margin-top:21px;
+    font-weight:bold;
+}
+
+.cont_03 ul li:first-child a{margin-top:0;}
+.cont_03 ul li a:hover{
+    color:#009223;
+    text-decoration:underline;
+}
+
+.cont_04{
+    float:left;
+    width:270px;
+    height:100%;
+    margin-left:45px;
+    background:url('../img/270X300\ \(1\)_20230829025721267.jpg');
+    position:relative;
+    border-radius:0 30px 0 30px;
+}
+
+/* footer  */
+
+footer{
+    position:relative;
+    width:100%;
+    height:300px;
+}
+
+/*  footer top */
+
+footer .footer_top{
+    position:absolute;
+    width:100%;
+    height:160px;
+    background-color: white;
+}
+
+.footer_top .foot_top_nav{
+    width:1300px;
+    height: 160px;
+    margin:0 auto;
+}
+.ftc{
+    position:relative;
+    display: block;
+    float:left;
+    margin:20px 33px;
+    width:250px;
+    height:120px;
+}
+
+.f-ico{
+    position: absolute;
+    width:70px;
+    height:70px;
+    top:25px;
+    left:20px;
+}
+
+/* ul li로해야하는데 다 div로함 노가다 ㄱ
+    icon넣기 
+*/
+.foot_top_cont_01 .f-ico {
+    background:url(../img/icon_quickmenu.png) no-repeat 0px 0px;
+}
+.foot_top_cont_02 .f-ico {
+    background:url(../img/icon_quickmenu.png) no-repeat -70px 0px;
+}
+.foot_top_cont_03 .f-ico {
+    background:url(../img/icon_quickmenu.png) no-repeat -140px 3px;
+}
+.foot_top_cont_04 .f-ico {
+    background:url(../img/icon_quickmenu.png) no-repeat -210px 3px;
+}
+/* footer top 글씨 조정*/
+.foot_top_cont_01 .ft_title{
+    position:absolute;
+    top:30px;
+    left:100px;
+    font-size:18px;
+    font-weight:bold;
+}
+.foot_top_cont_02 .ft_title{
+    position:absolute;
+    top:30px;
+    left:100px;
+    font-size:18px;
+    font-weight:bold;
+}
+.foot_top_cont_03 .ft_title{
+    position:absolute;
+    top:30px;
+    left:100px;
+    font-size:18px;
+    font-weight:bold;
+}
+.foot_top_cont_04 .ft_title{
+    position:absolute;
+    top:30px;
+    left:100px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.foot_top_cont_01 .ft_info{
+    position:absolute;
+    top:60px;
+    left:100px;
+    font-size:12px;
+    color:#464646aa;
+    font-weight:bold;
+}
+.foot_top_cont_02 .ft_info{
+    position:absolute;
+    top:60px;
+    left:100px;
+    font-size:12px;
+    color:#464646aa;
+    font-weight:bold;
+}
+.foot_top_cont_03 .ft_info{
+    position:absolute;
+    top:60px;
+    left:100px;
+    font-size:12px;
+    color:#464646aa;
+    font-weight:bold;
+}
+.foot_top_cont_04 .ft_info{
+    position:absolute;
+    top:60px;
+    left:100px;
+    font-size:12px;
+    color:#464646aa;
+    font-weight:bold;
+}
+
+
+
+/*  footer bottom */
+footer .footer_bottom{
+    position:absolute;
+    width:100%;
+    bottom:0;
+    overflow: hidden;
+    margin-bottom:1px;
+    background-color: #292929;
+}
+.footer_bottom .foot_bottom_nav{
+    position:relative;
+    width:1300px;
+    height:140px;
+    margin:0 auto; 
+}
+
+.foot_bottom_nav{
+    padding-left:30px;
+}
+
+.foot_bottom_nav .btm_nav>li{
+    display:block;
+    float:left;
+    width:110px;
+    height:50px;   
+    font-size:13px;
+}
+
+.fbn_02 a{
+    font-weight: bold;
+    color: #ddd!important;
+}
+
+.fbn_03 a{
+    margin-left:20px;
+}
+
+.btm_nav>li>a{
+    line-height:50px;
+    color:#616161;
+}
+
+.office_info{
+    float:left;
+    width:1300px;
+    height:90px;
+    color:#616161;
+    padding-top:20px;
+    line-height: 20px;
+    font-size:13px;
+}
+
+.office_info span.in::before{
+    content: '|';
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 7px;
+}
+
+/* 사이에 선*/
+.footer_bottom_underline{
+    position: absolute;
+    top:55px;
+    left:0px;
+    width:100%;
+    height:0.5px;
+    z-index:15;
+    border-bottom: 1px solid#414141;
+}
+
+/* footer SNS */
+.sns_ico .instagram{
+    position:absolute;
+    top:70px;
+    right:250px;
+    width:50px;
+    height:50px;
+    background:url(../img/icon_sns_instar.png) no-repeat -50px 0px;
+    opacity:0.6;
+    transition: all 0.3s;
+}
+
+.sns_ico .instagram:hover{
+    opacity:1;
+}
+
+
+.facebook{
+    position:absolute;
+    top:70px;
+    right:180px;
+    width:50px;
+    height:50px;  
+    background:url(../img/icon_sns_facebook.png) no-repeat -50px 0px;
+    opacity:0.6;
+    transition: all 0.3s;
+}
+
+.sns_ico .facebook:hover{
+    opacity:1;
+}
