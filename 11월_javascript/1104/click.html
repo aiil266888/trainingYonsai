@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{}
+    </style>
+</head>
+<body>
+    <button id="colorButton" onclick="changing()">
+        change background
+    </button>
+</body>
+</html>
+<script>
+    const colors = ["#FF5733","#33FF57","#FF1793","#FF5733","#FF1111","#FF9999"];
+    var now = 0;
+    function changing(){
+        document.body.style.backgroundColor=colors[now];
+        now++;
+        if(now>6){
+            now = 0;
+        }
+    }
+
+</script>

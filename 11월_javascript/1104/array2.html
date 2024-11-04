@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function (){
+            var days = ["일","월","화","수","목","금","토"];
+            var today = new Date();
+            var yoil = today.getDay();
+
+
+            document.querySelector('#yoil').innerHTML = yoil
+        }
+    </script>
+</head>
+<body>
+    오늘은 <span id="yoil">0</span>요일입니다.
+</body>
+</html> 
