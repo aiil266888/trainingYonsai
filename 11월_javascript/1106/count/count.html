@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <title>Document</title>
+    <style>
+        .random{
+            width:450px;
+            height:200px;
+            border:2px solid slateblue;
+        }
+        .random>p{
+            margin:0 38px;
+            float:left;
+            font-size:130px;
+            
+        }
+    </style>
+
+    <script>
+        $({percent:0}).animate({percent:111},{
+            duration:3000, //3초동안
+            progress:function(){
+                var now = this.percent;
+                $('#num').text(Math.ceil(now));//소수점이하 올린다
+            }
+        });
+        
+    </script>
+</head>
+<body>
+    <h1 id="num">000</h1>
+
+    <div class="random">
+    <p id="num1">0</p><p id="num2">0</p><p id="num3">0</p>
+</div>
+</body>
+</html>

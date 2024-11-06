@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .m_menu {
+            width: 200px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .m_menu>li>a {
+            display: block;
+            height: 36px;
+            background-color: #390;
+            line-height: 36px;
+            border-top: 1px dotted #fff;
+            color: #fff;
+        }
+
+        .m_menu .sub {
+            height: 0;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+
+        .m_menu .sub li {
+            background-color: #cf9;
+        }
+
+        .m_menu .sub li a {
+            display: block;
+            line-height: 36px;
+            height: 36px;
+            color: #222;
+        }
+
+        .m_menu .sub li a:hover {
+            background-color: #cf0;
+        }
+    </style>
+    <script>
+        var sub = document.querySelectorAll('sub');
+        function slideUp(){
+            sub.forEach(function(item){
+                item.computedStyleMap.height="0px";
+            });
+            for(var i = 0; i< sub.length; i++){
+                sub[i].style.heighth = "0px";
+            }
+        };    
+        var menuLia = document.querySelectorAll('.m_menu>li>a');
+        menuLia.forEach(function(item){
+            item.addEventListener('click',function(){
+                //getComputedStyle은 DOM요소의 현재 스타일을 가져오기 위한 메서드
+                //이 메서드를 사용하면 특정 요소에 적용된 모든 스타일 속성과 그 값에 대한 정보를 얻을 수 있다
+                var subHeight = getComputedStyle(this.nextElementSibling).height();
+                //alert(subHeight);
+                if(subHeight === '0px'){
+                    slideUp(); //현재 열려있는 모든 sub를 닫고
+                    this.nextElementSibling.style.height = '108px';
+                }else{
+                    this.nextElementSibling.style.height = '0px';
+                }
+            });
+        });  
+    
+    </script>
+</head>
+<body>
+    <ul class="m_menu">
+        <li>
+            <a href="#">회사소개</a>
+            <ul class="sub">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">제품소개</a>
+            <ul class="sub">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">커뮤니티</a>
+            <ul class="sub">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">다운로드</a>
+            <ul class="sub">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+            </ul>
+        </li>
+    </ul>
+    <script src="js/script.js"></script>
+</body>
+</html>
