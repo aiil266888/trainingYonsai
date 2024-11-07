@@ -1,0 +1,35 @@
+body{height:3300px;}
+h1{font-size:100%;}
+.indicator{
+    position:fixed;
+    right:10px;
+    top:10px;
+}
+li{
+    list-style: none;
+    height:60px;
+    top:40px;
+    width:60px;
+    position:fixed;
+}
+
+#item1{
+    background-color: plum;
+    left:20px;
+}
+#item2{
+    background-color: pink;
+    left:100px;
+}
+#item3{
+    background-color: powderblue;
+    left:180px;
+}
+#item4{
+    background-color: palevioletred;
+    left:260px;
+}
+#item5{
+    background-color: palegreen;
+    left:340px;
+}

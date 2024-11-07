@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tran.css">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+    $(function(){
+         var top1 = $("#item1").offset().top;
+         var left1 = $("#item1").offset().left;
+         var left2 = $("#item2").offset().left;
+         var left3 = $("#item3").offset().left;
+         var left4 = $("#item4").offset().left;
+         var left5 = $("#item5").offset().left;
+         console.log(top1,left1,left2,left3,left4,left5);
+     
+         $(window).scroll(function(){
+         var sct = $(this).scrollTop();
+         $('#value').text(sct);
+
+         $('#item1').css({'top':top1 + sct /4});
+         $('#item2').css({'top':top1 + sct /5,'left':left2+sct/8})
+         });
+     });
+ </script>
+</head>
+<body>
+    <h1>스크롤에 따라 움직이는 상자</h1>
+    <p class="indicator"> 스크롤 값 <span id="value">0</span></p>
+    <ul>
+        <li id="item1"></li>
+        <li id="item2"></li>
+        <li id="item3"></li>
+        <li id="item4"></li>
+        <li id="item5"></li>
+    </ul>
+</body>
+</html>
