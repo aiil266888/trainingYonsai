@@ -28,7 +28,8 @@ function App(){
   // );
 
   return(
-    <UserCard name="Alice" age={30} location="New York"/>
+    // <UserCard name="Alice" age={30} location="New York"/>
+    <UserList/>
   );
 }
 export default App;
