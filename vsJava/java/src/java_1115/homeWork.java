@@ -27,6 +27,7 @@ public class homeWork {
                     System.out.println("아이템을 삭제합니다");
                     System.out.print("삭제할 아이템 > ");
 
+
                 break;
             }
         } while (num != 4);
