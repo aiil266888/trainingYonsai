@@ -1,4 +1,4 @@
-package a1126.game1;
+package java_1126.game1;
 
 public class Main {
     public static void main(String[] args) {

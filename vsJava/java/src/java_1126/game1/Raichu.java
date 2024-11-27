@@ -1,4 +1,4 @@
-package a1126.game1;
+package java_1126.game1;
 
 //상속
 // -키워드 : 자식 클래스 extends 부모클래스()

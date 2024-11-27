@@ -1,4 +1,4 @@
-package a1126.game1;
+package java_1126.game1;
 //클래스 :객체를 정의하는 설계도
 public class Pikachu {
 
