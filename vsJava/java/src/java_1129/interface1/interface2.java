@@ -33,12 +33,12 @@ class Bird implements Flyable{
     }
 }
 
-class Fish implements java_1129.Swimmable {
-    @Override
-    public void swim() {
-        System.out.println(" 물고기가 수영한다 ");
-    }
-}
+//class Fish implements java_1129.Swimmable {
+//    @Override
+//    public void swim() {
+//        System.out.println(" 물고기가 수영한다 ");
+//    }
+//}
 
 public class interface2 {
     public static void main(String[] args) {
