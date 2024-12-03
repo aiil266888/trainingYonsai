@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentDAO {
+    FileClass file = new FileClass("student", "student_Grade");//파일만들기
     private ArrayList<java_1202.hak5.StudentDTO> slist;
     Scanner sc = new Scanner(System.in);
     public StudentDAO(){ //생성메서드
@@ -144,10 +145,24 @@ public class StudentDAO {
             System.out.println(slist.get(i).toString());
         }
     }
-              
-             
-        
-           
+    public void dataSave() throws Exception {
+        file.create();
+        String str = "이름\t 나이\t 국어\\t 영어\\t 수학\n" +
+                "-------------------\n";
+        for(int i = 0 ;i < slist.size();i++){
+            str += slist.get(i).toString()+"\n";
+        }
+        file.write(str);
+
+    }
 
 
+    public void dataLoad() {
+        //데이터 입출력은 반드시 예외처리
+        try{
+            file.read();
+        }catch(Exception e){
+            System.out.println("읽을 파일이 없습니");
+        }
+    }
 }

@@ -42,6 +42,14 @@ public class MainClass {
                 test.userUpdate();
             }else if(choice==5){
                 test.printAll();
+            }else if(choice==6){
+                try{
+                    test.dataSave();
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+            }else if(choice==7){
+                test.dataLoad();
             }else if(choice==0){
                 System.out.println("종료합니다.");
                 sc.close();
