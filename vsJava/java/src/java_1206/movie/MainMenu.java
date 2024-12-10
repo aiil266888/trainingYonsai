@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 
 
-class MainMenu extends java1206.movie.AbstractMenu {
+class MainMenu extends java_1206.movie.AbstractMenu {
 
     private static final MainMenu instance = new MainMenu(null);
     public static MainMenu getInstance() {
@@ -46,7 +46,7 @@ class MainMenu extends java1206.movie.AbstractMenu {
                     System.out.println(">> 비밀번호가 틀렸습니다.");
                     return this; //실패한 경우 메인 메뉴 객체반환
                 }
-                    java1206.movie.AdminMenu adminMenu = java1206.movie.AdminMenu.getInstance(); //관리자 객체를 가져옴
+                    java_1206.movie.AdminMenu adminMenu = java_1206.movie.AdminMenu.getInstance(); //관리자 객체를 가져옴
                     adminMenu.setPrevMenu(this); //mainMenu메인 메뉴를 이전 메뉴로 등록
                     return adminMenu; //관리자 객체를 반환    
                             case "q":

@@ -4,7 +4,7 @@ import java.awt.*;
 import java.util.Scanner;
 
 
-abstract class AbstractMenu extends Menu {
+abstract class AbstractMenu implements Menu {
 //추상클래스
 //  abstract 클래스는 Menu 인터페이스를 구현하며, 추후 메인메뉴(Mainmenu)
 //와 관자메뉴(AdminMenu)의 부모클래스가된다.

@@ -1,4 +1,6 @@
-package a1206.movie;
+package java_1206.movie;
+
+import java_1206.movie.MainMenu;
 
 public class MainApp {
     public static void main(String[] args) {
