@@ -1,4 +1,4 @@
-package java_1211.javaair;
+package a1210.javaair;
 
 import java.util.Scanner;
 
