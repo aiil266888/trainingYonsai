@@ -1,12 +1,13 @@
 package SemiProject;
 
-import java_1202.hak5.StudentDTO;
-
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class UserDAO {
-    private ArrayList<UserDTO> ulist;
+    private static ArrayList<UserDTO> ulist;//유저 정보 저장
+    private static Map<String, UserDTO> userlistMap = new HashMap<>();
 
     Scanner scan = new Scanner(System.in);
     public UserDAO(){ //생성메서드

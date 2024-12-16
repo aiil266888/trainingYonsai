@@ -1,10 +1,7 @@
 package SemiProject;
 
-
-import java_1206.movie.Reservation;
-import java_1211.javaair.FlightManager;
-
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main extends AbstractMenu {
@@ -16,7 +13,7 @@ public class Main extends AbstractMenu {
         System.out.println("프로그램을 실행합니다");
 
         Outter:while(true){
-            System.out.println("========L O G I N ========");
+            System.out.println("=============L O G I N =============");
             System.out.print(" ID >>  ");
             Id = scan.nextLine();
             System.out.println();
@@ -24,9 +21,12 @@ public class Main extends AbstractMenu {
             Pw = scan.nextLine();
             System.out.println();
 
+            //로그인체크
+            Logincheck lg  = new Logincheck();//로그인체크 객체 생성
+            lg.checkLogin(Id,Pw);
+
             //관리자 체크
             if(Id == "admin"){
-
                 //관리자 체크하고 로그인 체크하고 아래 IF문으로 분류해야함
             }//End if Admin Check
 
@@ -75,4 +75,5 @@ public class Main extends AbstractMenu {
             }
         }//END While
     }//END MAIN
+
 }//END class
