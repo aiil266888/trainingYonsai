@@ -39,16 +39,16 @@ public class Main extends AbstractMenu {
                 int amenu = scan.nextInt();
                 switch(amenu){
                     case 1: // 신규사원 등록:
-                        dm.insertEmployee();
+                        lg.insertEmployee();
                         break;
                     case 2: // 사원목록 조회
-                        dm.serchEmployee();
+                        lg.serchEmployee();
                         break;
                     case 3: // 사원정보 변경
-                        dm.modifyEmployee();
+                        lg.modifyEmployee();
                         break;
                     case 4: // 사원삭제
-                        dm.deleteEmployee();
+                        lg.deleteEmployee();
                         break;
                     case 5: //프로그램 종료
                         System.out.println("프로그램을 종료합니다");
@@ -65,10 +65,10 @@ public class Main extends AbstractMenu {
                 int menu = scan.nextInt();
                 switch(menu){
                     case 1: // 사원목록 조회:
-                        am.surchingList();
+                        lg.surchingList(Id);
                         break;
                     case 2: // 개인정보 변경
-                        am.modifyInformation();
+                        lg.modifyInformation(Id);
                         break;
                     case 3: //프로그램 종료
                         System.out.println("프로그램을 종료합니다");

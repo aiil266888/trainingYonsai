@@ -9,30 +9,28 @@ public class Logincheck {
     Scanner scan = new Scanner(System.in);
 
     private static ArrayList<UserDTO> ulist;
-    private static Map<String, UserDTO> userlistMap = new HashMap<>();
-
     public Logincheck() {
         //더미데이터 생성메서드
         ulist = new ArrayList<>();
         //기본데이터 입력
-        ulist.add(new UserDTO("minju", "minju1", "박민주", 34, "대리", "마케팅", "010-123-4567", "서울시 영등포구", 0));
+        ulist.add(new UserDTO("minju", "minju1", "박민주", 34, "대리", "마케팅", "010-123-4567", "서울시 용산구", 0));
         ulist.add(new UserDTO("daeju", "dddju", "김대주", 45, "부장", "마케팅", "010-123-4567", "경기도 안산시", 0));
         ulist.add(new UserDTO("jihwan", "1234", "오지환", 31, "대리", "마케팅", "010-123-4567", "경기도 안양시", 0));
         ulist.add(new UserDTO("star1", "star111", "김혜성", 25, "주임", "마케팅", "010-123-4567", "경기도 의왕시", 0));
         ulist.add(new UserDTO("Eusung", "re53", "이우성", 36, "과장", "마케팅", "010-123-4567", "서울시 관악구", 0));
         ulist.add(new UserDTO("heroKim", "young", "김영웅", 23, "사원", "마케팅", "010-123-4567", "서울시 마포구", 0));
-        ulist.add(new UserDTO("mangmuri", "tack111", "김택연", 21, "사원", "마케팅", "010-123-4567", "서울시 또뭐있지", 0));
+        ulist.add(new UserDTO("mangmuri", "tack111", "김택연", 21, "사원", "마케팅", "010-123-4567", "서울시 뭐있지", 0));
         ulist.add(new UserDTO("superstar", "do111", "김도영", 22, "사원", "마케팅", "010-123-4567", "경기도 광주시", 0));
         ulist.add(new UserDTO("monster", "ryuh111", "류현진", 36, "대리", "마케팅", "010-123-4567", "경기도 수원시", 0));
-        ulist.add(new UserDTO("choi", "homerun", "최정", 37, "과장", "마케팅", "010-123-4567", "인천 지리모름", 0));
-        ulist.add(new UserDTO("kimsh", "seohyun", "김서현", 24, "사원", "마케팅", "010-123-4567", "경기도 의정부시", 0));
+        ulist.add(new UserDTO("choi", "homerun", "최정민", 37, "과장", "마케팅", "010-123-4567", "인천시 몰라구", 0));
+        ulist.add(new UserDTO("kimsh", "seohyun", "김서현", 24, "사원", "마케팅", "010-123-4567", "경기도 의정부", 0));
         ulist.add(new UserDTO("jungsb", "subin", "정수빈", 30, "대리", "마케팅", "010-123-4567", "경기도 관악구", 0));
-        ulist.add(new UserDTO("nasungb", "bumbum", "나성범", 31, "대리", "마케팅", "010-123-4567", "서울시 영등포구", 0));
+        ulist.add(new UserDTO("nasungb", "bumbum", "나성범", 31, "대리", "마케팅", "010-123-4567", "서울시 영등포", 0));
         ulist.add(new UserDTO("sonasobi", "oppamuzina", "손아섭", 41, "부장", "마케팅", "010-123-4567", "경기도 성남시", 0));
         ulist.add(new UserDTO("choiwon", "wonjun1", "최원준", 28, "주임", "마케팅", "010-123-4567", "경기도 부천시", 0));
         ulist.add(new UserDTO("wonjungkim", "wonwonwon", "김원중", 30, "주임", "마케팅", "010-123-4567", "서울시 동작구", 0));
         ulist.add(new UserDTO("sangsu", "susu", "김상수", 34, "대리", "마케팅", "010-123-4567", "서울시 도봉구", 0));
-        ulist.add(new UserDTO("huckpark", "sinra", "박혁거세", 56, "부장", "마케팅", "010-123-4567", "경기도 수원시", 0));
+        ulist.add(new UserDTO("huckpark", "sinra", "박혁세", 56, "부장", "마케팅", "010-123-4567", "경기도 수원시", 0));
         ulist.add(new UserDTO("cheonsung", "chs123", "천성호", 27, "주임", "마케팅", "010-123-4567", "경기도 광주시", 0));
         ulist.add(new UserDTO("huihui", "nckimhui", "김휘집", 29, "주임", "마케팅", "010-123-4567", "경기도 안양시", 0));
         ulist.add(new UserDTO("admin", "1234", "관리자", 00, "관리자", "관리자", "000-000-0000", "관리자", 1));
@@ -57,5 +55,79 @@ public class Logincheck {
             }
         }
     }//END  checkLogin
+
+    //----------------------------------관리자용 메뉴----------------------------------------//
+    //직원추가
+    public void insertEmployee() {
+    }
+    //직원조회
+    public void serchEmployee() {
+        System.out.println("========================사원명단===========================");
+        int count =1;
+        for(int i=0; i < ulist.size(); i++){
+            if(ulist.get(i).getId()=="admin"){//관리자 정보 출력 방지
+                return;
+            }else {
+                System.out.print(" ID : ");
+                System.out.print(ulist.get(i).getId() + " | ");
+                System.out.print(" PW : ");
+                System.out.print(ulist.get(i).getPw() + " | ");
+                System.out.print(" 이름 : ");
+                System.out.print(ulist.get(i).getName() + " | ");
+                System.out.print(" 나이 : ");
+                System.out.print(ulist.get(i).getAge() + " | ");
+                System.out.print(" 직급 : ");
+                System.out.print(ulist.get(i).getGrade() + " | ");
+                System.out.print(" 부서 : ");
+                System.out.print(ulist.get(i).getDepartment() + " | ");
+                System.out.print(" 연락처 : ");
+                System.out.print(ulist.get(i).getPhone() + " | ");
+                System.out.print(" 주소 : ");
+                System.out.print(ulist.get(i).getAddress() + " | ");
+                count++;
+                System.out.println();
+            }
+        }
+        System.out.println("==========================================================");
+    }
+    //직원정보 수정
+    public void modifyEmployee() {
+    }
+    //직원삭제
+    public void deleteEmployee() {
+    }
+
+    //----------------------------------일반유저용 메뉴--------------------------------------//
+    //사원목록 조회
+    protected void surchingList(String Id) {
+        System.out.println("========================사원명단===========================");
+        int count =1;
+        for(int i=0; i < ulist.size(); i++){
+            if(ulist.get(i).getId()=="admin"){//관리자 정보 출력 방지
+                return;
+            }else {
+                System.out.print(" 이름 : ");
+                System.out.print(ulist.get(i).getName() + " | ");
+                System.out.print(" 나이 : ");
+                System.out.print(ulist.get(i).getAge() + " | ");
+                System.out.print(" 직급 : ");
+                System.out.print(ulist.get(i).getGrade() + " | ");
+                System.out.print(" 부서 : ");
+                System.out.print(ulist.get(i).getDepartment() + " | ");
+                System.out.print(" 연락처 : ");
+                System.out.print(ulist.get(i).getPhone() + " | ");
+                System.out.print(" 주소 : ");
+                System.out.print(ulist.get(i).getAddress() + " | ");
+                count++;
+                System.out.println();
+            }
+        }
+        System.out.println("==========================================================");
+    }
+
+    //사원정보 변경
+    protected void modifyInformation(String Id){
+
+    }
 
 }//END class
