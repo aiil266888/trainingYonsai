@@ -23,6 +23,10 @@ public class UserDTO {
         this.adminflag = adminflag;
     }
 
+    public UserDTO() {
+
+    }
+
     public String getId() {
         return id;
     }
@@ -105,7 +109,7 @@ public class UserDTO {
         }
 
 
-        return "UserDTO{" +
+        return "등록 정보{" +
                 "아이디='" + id + '\'' +
                 ", 이름='" + name + '\'' +
                 ", 나이=" + age +
@@ -113,7 +117,6 @@ public class UserDTO {
                 ", 부서='" + department + '\'' +
                 ", 연락처='" + phone + '\'' +
                 ", 주소='" + address + '\'' +
-                ", 유저등급=" + flag +
                 '}';
     }
 }

@@ -1,17 +1,15 @@
 package SemiProject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Logincheck {
-    Scanner scan = new Scanner(System.in);
+    static Scanner scan = new Scanner(System.in);
 
     private static ArrayList<UserDTO> ulist;
     public Logincheck() {
         //더미데이터 생성메서드
-        ulist = new ArrayList<>();
+        ulist = new ArrayList<UserDTO>();
         //기본데이터 입력
         ulist.add(new UserDTO("minju", "minju1", "박민주", 34, "대리", "마케팅", "010-123-4567", "서울시 용산구", 0));
         ulist.add(new UserDTO("daeju", "dddju", "김대주", 45, "부장", "마케팅", "010-123-4567", "경기도 안산시", 0));
@@ -57,11 +55,46 @@ public class Logincheck {
     }//END  checkLogin
 
     //----------------------------------관리자용 메뉴----------------------------------------//
-    //직원추가
-    public void insertEmployee() {
+    //----직원추가
+        public void insertEmployee() {
+            UserDTO d= new UserDTO();
+            System.out.println("========================직원추가==========================");
+            System.out.print(" ID : ");
+            d.setId(scan.next());
+            System.out.print(" PW : ");
+            d.setPw(scan.next());
+            System.out.print(" 이름 : ");
+            d.setName(scan.next());
+            System.out.print(" 나이 : ");
+            d.setAge(scan.nextInt());
+            System.out.print(" 직급 : ");
+            d.setGrade(scan.next());
+            System.out.print(" 부서 : ");
+            d.setDepartment(scan.next());
+            System.out.print(" 연락처 : ");
+            d.setPhone(scan.next());
+            System.out.print(" 주소 : ");
+            d.setAddress(scan.next());
+            d.setAdminflag(0);
+
+            System.out.println("등록하신 정보는 아래와 같습니다 정말 등록하시겠습니까?");
+            System.out.println(d);
+            System.out.println("등록하시려면 y를 입력해주세요 >> ");
+            String check = scan.next();
+            if(check.equals("y")){
+                insert(d);
+                System.out.println("등록 되었습니다");
+            }else{
+                System.out.println("등록이 취소되었습니다");
+            }
+        }
+    //----직원추가실행
+    private void insert(UserDTO d) {
+        ulist.add(d);
     }
-    //직원조회
-    public void serchEmployee() {
+
+    //---관리자용 직원조회
+    public static void serchEmployee() {
         System.out.println("========================사원명단===========================");
         int count =1;
         for(int i=0; i < ulist.size(); i++){
@@ -90,16 +123,22 @@ public class Logincheck {
         }
         System.out.println("==========================================================");
     }
-    //직원정보 수정
-    public void modifyEmployee() {
+    //---관리자용 직원정보 수정
+    public static void modifyEmployee() {
     }
-    //직원삭제
-    public void deleteEmployee() {
+    //----직원삭제
+    public static void deleteEmployee() {
     }
 
+
+
+
     //----------------------------------일반유저용 메뉴--------------------------------------//
+    public static void AbstractMenu(){
+
+    }
     //사원목록 조회
-    protected void surchingList(String Id) {
+    protected static void surchingList(String Id) {
         System.out.println("========================사원명단===========================");
         int count =1;
         for(int i=0; i < ulist.size(); i++){
@@ -126,8 +165,9 @@ public class Logincheck {
     }
 
     //사원정보 변경
-    protected void modifyInformation(String Id){
+    protected static void modifyInformation(String Id){
 
     }
 
 }//END class
+
