@@ -83,7 +83,7 @@ public class Logincheck {
             String check = scan.next();
             if(check.equals("y")){
                 insert(d);
-                System.out.println("등록 되었습니다");
+                System.out.println("등록되었습니다");
             }else{
                 System.out.println("등록이 취소되었습니다");
             }
@@ -128,6 +128,12 @@ public class Logincheck {
     }
     //----직원삭제
     public static void deleteEmployee() {
+        System.out.println("==========================================================");
+        System.out.print("삭제하실 직원의 ID를 입력해주세요 >> ");
+        String deleteName = scan.next();
+
+        System.out.println("다음 정보를 삭제합니까? 삭제하시려면 y를 입력하세요");
+        ulist.get(deleteName).getId();
     }
 
 
