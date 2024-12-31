@@ -14,7 +14,7 @@ public class Main {
         int Adminflag = 0;
         Logincheck check = new Logincheck(); //실행 동시에 더미데이터 삽입
 
-        Outter:while(true) {
+    Outter:while(true) {
             System.out.println("===================================================================");
             System.out.println("|                J  A  V  A  사  원  관  리 프  로  그  램            |");
             System.out.println("===================================================================");
@@ -25,11 +25,8 @@ public class Main {
 
             switch (choice){
                 case 1:
-
-
-
                     System.out.println("=============L O G I N =============");
-                    System.out.print(" ID >>  ");
+                    System.out.print("ID >>  ");
                     Id = scan.next();
                     System.out.print("PASSWORD >> ");
                     Pw = scan.next();
